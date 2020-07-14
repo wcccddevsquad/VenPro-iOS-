@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Event Info View Controller-->
         <scene sceneID="X0a-0n-BKA">
             <objects>
-                <viewController id="ivu-dH-601" sceneMemberID="viewController">
+                <viewController id="ivu-dH-601" customClass="EventInfoViewController" customModule="VenPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V2O-rJ-fgl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -233,7 +233,7 @@
         <!--CreateAccount-->
         <scene sceneID="ARM-GO-Jbd">
             <objects>
-                <viewController title="CreateAccount" id="7B6-h4-fbS" sceneMemberID="viewController">
+                <viewController title="CreateAccount" id="7B6-h4-fbS" customClass="CreateAccountViewController" customModule="VenPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iil-r9-nK3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -342,7 +342,7 @@
         <!--Verification-->
         <scene sceneID="Nuw-IO-ZMF">
             <objects>
-                <viewController title="Verification" id="LB0-P9-0LJ" sceneMemberID="viewController">
+                <viewController title="Verification" id="LB0-P9-0LJ" customClass="TextVerificationViewController" customModule="VenPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C2d-Ja-Mle">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -385,7 +385,7 @@
         <!--Login-->
         <scene sceneID="Oza-c4-SQE">
             <objects>
-                <viewController title="Login" id="N8a-Hd-bKa" customClass="ViewController" customModule="VenPro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login" id="N8a-Hd-bKa" customClass="LoginViewController" customModule="VenPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BIh-br-7jk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
