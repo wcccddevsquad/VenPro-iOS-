@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oTW-om-vVU">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -224,11 +224,71 @@
                     <navigationItem key="navigationItem" id="qju-Y9-6TH"/>
                     <connections>
                         <outlet property="tableView" destination="Z3s-5U-fJj" id="noi-a3-it6"/>
+                        <segue destination="6vI-ri-ikq" kind="show" identifier="AttendeeDetail" id="IQi-DB-Tff"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="soD-Ud-z7s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3532" y="818"/>
+        </scene>
+        <!--Detailed Attendee View Controller-->
+        <scene sceneID="VGp-nu-D0r">
+            <objects>
+                <viewController id="6vI-ri-ikq" customClass="DetailedAttendeeViewController" customModule="VenPro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sLe-j8-EUu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Fpv-PJ-dQh">
+                                <rect key="frame" x="8" y="646" width="398" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oqu-TG-9hB">
+                                        <rect key="frame" x="0.0" y="0.0" width="99.666666666666671" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="❤️"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNf-of-Rtj">
+                                        <rect key="frame" x="99.666666666666686" y="0.0" width="99.333333333333314" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="🍸"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTF-7j-vlk">
+                                        <rect key="frame" x="199" y="0.0" width="99.666666666666686" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="✉️"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gby-Gs-Bj2">
+                                        <rect key="frame" x="298.66666666666669" y="0.0" width="99.333333333333314" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="X"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vgj-GK-egi"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BFe-WU-sVM">
+                                <rect key="frame" x="8" y="51.666666666666686" width="398" height="585.33333333333337"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="BFe-WU-sVM" firstAttribute="top" secondItem="wK3-p9-6v4" secondAttribute="top" constant="50" id="4gZ-x9-J8N"/>
+                            <constraint firstItem="wK3-p9-6v4" firstAttribute="trailing" secondItem="Fpv-PJ-dQh" secondAttribute="trailing" constant="8" id="WzR-OS-eeJ"/>
+                            <constraint firstItem="wK3-p9-6v4" firstAttribute="trailing" secondItem="BFe-WU-sVM" secondAttribute="trailing" constant="8" id="ZbW-MG-VXw"/>
+                            <constraint firstItem="Fpv-PJ-dQh" firstAttribute="top" secondItem="BFe-WU-sVM" secondAttribute="bottom" constant="8" id="jOo-Vy-GrI"/>
+                            <constraint firstItem="wK3-p9-6v4" firstAttribute="bottom" secondItem="Fpv-PJ-dQh" secondAttribute="bottom" constant="20" id="rlQ-G8-PsC"/>
+                            <constraint firstItem="BFe-WU-sVM" firstAttribute="leading" secondItem="wK3-p9-6v4" secondAttribute="leading" constant="8" id="x6R-4g-qbE"/>
+                            <constraint firstItem="Fpv-PJ-dQh" firstAttribute="leading" secondItem="wK3-p9-6v4" secondAttribute="leading" constant="8" id="yrf-gX-4Ck"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wK3-p9-6v4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LNn-a0-WAb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A8Y-iS-N6a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4403" y="818"/>
         </scene>
         <!--CreateAccount-->
         <scene sceneID="ARM-GO-Jbd">

@@ -27,6 +27,7 @@ class AttendeeListViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("I was tapped!")
+        performSegue(withIdentifier: "AttendeeDetail", sender: nil)
     }
 
     override func viewDidLoad() {
