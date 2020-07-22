@@ -64,10 +64,10 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvr-sQ-LM9">
-                                <rect key="frame" x="171" y="635" width="72" height="30"/>
+                                <rect key="frame" x="171.66666666666666" y="635" width="71" height="30"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Find Event"/>
+                                <state key="normal" title="Join Event"/>
                                 <connections>
                                     <segue destination="oTW-om-vVU" kind="show" id="FIb-63-eQC"/>
                                 </connections>
