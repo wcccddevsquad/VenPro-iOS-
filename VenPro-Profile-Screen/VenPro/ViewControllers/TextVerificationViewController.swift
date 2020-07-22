@@ -10,6 +10,13 @@ import UIKit
 
 class TextVerificationViewController: UIViewController {
 
+    
+    @IBAction func SubmitVerificationButton(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "VerificationToProfile", sender: self)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

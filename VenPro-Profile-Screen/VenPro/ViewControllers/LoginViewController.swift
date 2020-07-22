@@ -10,6 +10,18 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBAction func SignupButtonPressed(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "GoToAccountCreationScreen", sender: self)
+    }
+    
+    
+    @IBAction func LoginButtonPressed(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "LoggedIn", sender: self)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

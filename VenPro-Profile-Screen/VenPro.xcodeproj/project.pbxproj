@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -89,7 +89,6 @@
 				37E3AB72A756A690041517D2 /* Pods-VenPro.debug.xcconfig */,
 				20DADAE1982B2208A0A561C1 /* Pods-VenPro.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -122,17 +121,25 @@
 		D0DF7E0724B6600E00A77E3A /* VenPro */ = {
 			isa = PBXGroup;
 			children = (
-				3E9B03A024BAC0FE00267EDD /* ViewControllers */,
 				3E9B03A124BAC12300267EDD /* Models */,
+				F9634E4324C8BFA7008DB6B1 /* View */,
+				3E9B03A024BAC0FE00267EDD /* ViewControllers */,
 				D0DF7E0824B6600E00A77E3A /* AppDelegate.swift */,
 				D0DF7E0A24B6600E00A77E3A /* SceneDelegate.swift */,
-				D0DF7E0E24B6600E00A77E3A /* Main.storyboard */,
 				D0DF7E1124B6600F00A77E3A /* Assets.xcassets */,
 				D0DF7E1324B6600F00A77E3A /* LaunchScreen.storyboard */,
 				3EC691C924C7B66200D8D46E /* GoogleService-Info.plist */,
 				D0DF7E1624B6600F00A77E3A /* Info.plist */,
 			);
 			path = VenPro;
+			sourceTree = "<group>";
+		};
+		F9634E4324C8BFA7008DB6B1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D0DF7E0E24B6600E00A77E3A /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

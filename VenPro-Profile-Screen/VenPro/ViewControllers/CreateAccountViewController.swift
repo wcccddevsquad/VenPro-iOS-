@@ -10,6 +10,12 @@ import UIKit
 
 class CreateAccountViewController: UIViewController {
 
+    
+    @IBAction func SubmitButtonPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "VerificationSegue", sender: self)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
