@@ -7,36 +7,27 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseUI
 
-class LoginViewController: UIViewController {
 
+class LoginViewController: UIViewController, AuthUIDelegate {
+
+    @IBOutlet weak var userNameText: UITextField!
+    
     @IBAction func SignupButtonPressed(_ sender: Any) {
         
         self.performSegue(withIdentifier: "GoToAccountCreationScreen", sender: self)
     }
     
     
+
+
+
+
     @IBAction func LoginButtonPressed(_ sender: Any) {
         
-        self.performSegue(withIdentifier: "LoggedIn", sender: self)
-    }
+       self.performSegue(withIdentifier: "LoggedIn", sender: self)
+}
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -7,30 +7,53 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseUI
 
-class CreateAccountViewController: UIViewController {
+class CreateAccountViewController: UIViewController, AuthUIDelegate {
 
     
     @IBAction func SubmitButtonPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "VerificationSegue", sender: self)
-    }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+        
+                    let authUI = FUIAuth.defaultAuthUI()
+                
+                    authUI!.delegate = self as? FUIAuthDelegate
+                
+                    let phoneProvider = FUIPhoneAuth(authUI: authUI!)
+                
+                    authUI!.providers = [phoneProvider]
+                
+                    authUI!.signIn(withProviderUI: phoneProvider, presenting: self, defaultValue: nil)
+                
+                func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
+                    if error != nil {
+                  self.performSegue(withIdentifier: "LoggedIn", sender: self)
+                    }
+                }
+                    
+                
+        //        let authUI = FUIAuth.defaultAuthUI()
+        //        authUI?.delegate = self as? FUIAuthDelegate
+        //
+        //        let providers: [FUIAuthProvider] = [
+        //            FUIPhoneAuth(authUI:FUIAuth.defaultAuthUI()!)]
+        //
+        //        authUI?.providers = providers
+        //
+        //        let authViewController = authUI?.authViewController()
+        //
+        //        self.present(authViewController!, animated: true) { }
+        //
+        //        func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
+        //          self.performSegue(withIdentifier: "LoggedIn", sender: self)
+        //        }
 
-        // Do any additional setup after loading the view.
-    }
-    
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+        //        self.performSegue(withIdentifier: "LoggedIn", sender: self)
+            }
+            
+            override func viewDidLoad() {
+                super.viewDidLoad()
+            }
 }
