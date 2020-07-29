@@ -13,7 +13,8 @@ import FirebaseUI
 
 class LoginViewController: UIViewController, AuthUIDelegate {
 
-    @IBOutlet weak var userNameText: UITextField!
+    
+    @IBOutlet weak var userNumber: UITextField!
     
     @IBAction func SignupButtonPressed(_ sender: Any) {
         
