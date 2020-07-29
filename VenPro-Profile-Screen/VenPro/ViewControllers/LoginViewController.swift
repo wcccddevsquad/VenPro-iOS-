@@ -13,18 +13,14 @@ import FirebaseUI
 
 class LoginViewController: UIViewController, AuthUIDelegate {
 
-    @IBOutlet weak var userNameText: UITextField!
+    
+    @IBOutlet weak var userNumber: UITextField!
     
     @IBAction func SignupButtonPressed(_ sender: Any) {
         
         self.performSegue(withIdentifier: "GoToAccountCreationScreen", sender: self)
     }
     
-    
-
-
-
-
     @IBAction func LoginButtonPressed(_ sender: Any) {
         
        self.performSegue(withIdentifier: "LoggedIn", sender: self)

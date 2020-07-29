@@ -462,24 +462,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="o3x-D4-VL1">
-                                <rect key="frame" x="80" y="274" width="254" height="188"/>
+                                <rect key="frame" x="80" y="301" width="254" height="134"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gpe-Fe-SDD">
-                                        <rect key="frame" x="0.0" y="0.0" width="254" height="138"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="254" height="84"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telephone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5XQ-Zb-DBI">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Roa-2l-Ze8">
                                                 <rect key="frame" x="0.0" y="0.0" width="254" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Roa-2l-Ze8">
-                                                <rect key="frame" x="0.0" y="54" width="254" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4v-TM-Pkd">
-                                                <rect key="frame" x="0.0" y="108" width="254" height="30"/>
-                                                <state key="normal" title="Login"/>
+                                                <rect key="frame" x="0.0" y="54" width="254" height="30"/>
+                                                <state key="normal" title="Send Verification Code"/>
                                                 <connections>
                                                     <action selector="LoginButtonPressed:" destination="N8a-Hd-bKa" eventType="touchUpInside" id="UZ0-7v-XgX"/>
                                                     <segue destination="BYZ-38-t0r" kind="show" identifier="LoggedIn" id="tny-Jl-N6r"/>
@@ -488,7 +483,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Cff-Ac-zgW">
-                                        <rect key="frame" x="0.0" y="158" width="254" height="30"/>
+                                        <rect key="frame" x="0.0" y="104" width="254" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xda-Th-9MO">
                                                 <rect key="frame" x="0.0" y="0.0" width="115" height="30"/>
@@ -525,12 +520,12 @@
                         <viewLayoutGuide key="safeArea" id="mr9-1Q-LLf"/>
                     </view>
                     <connections>
-                        <outlet property="userNameText" destination="5XQ-Zb-DBI" id="IPB-yj-CeF"/>
+                        <outlet property="userNumber" destination="Roa-2l-Ze8" id="50s-gV-LeX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQx-zJ-BN3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="70" y="616"/>
+            <point key="canvasLocation" x="268" y="797"/>
         </scene>
     </scenes>
     <resources>
