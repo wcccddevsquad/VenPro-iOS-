@@ -21,11 +21,6 @@ class LoginViewController: UIViewController, AuthUIDelegate {
         self.performSegue(withIdentifier: "GoToAccountCreationScreen", sender: self)
     }
     
-    
-
-
-
-
     @IBAction func LoginButtonPressed(_ sender: Any) {
         
        self.performSegue(withIdentifier: "LoggedIn", sender: self)

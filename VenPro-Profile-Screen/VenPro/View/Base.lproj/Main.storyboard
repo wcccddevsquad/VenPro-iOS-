@@ -520,7 +520,6 @@
                         <viewLayoutGuide key="safeArea" id="mr9-1Q-LLf"/>
                     </view>
                     <connections>
-                        <outlet property="phoneNumber" destination="Roa-2l-Ze8" id="zVO-0B-74n"/>
                         <outlet property="userNumber" destination="Roa-2l-Ze8" id="50s-gV-LeX"/>
                     </connections>
                 </viewController>
