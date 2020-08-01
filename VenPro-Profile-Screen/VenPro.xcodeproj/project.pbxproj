@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -39,6 +39,8 @@
 		3EBE55B424BAA8F1001C0CB0 /* AttendeeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeListViewController.swift; sourceTree = "<group>"; };
 		3EBE55B624BAABA4001C0CB0 /* AttendeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeTableViewCell.swift; sourceTree = "<group>"; };
 		3EE1477F24BFB48C00BF32BE /* DetailedAttendeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedAttendeeViewController.swift; sourceTree = "<group>"; };
+		8FEDC6A70B38D5F33E467AF9 /* Pods-VenPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenPro.release.xcconfig"; path = "Pods/Target Support Files/Pods-VenPro/Pods-VenPro.release.xcconfig"; sourceTree = "<group>"; };
+		BB5217EEE6BC665C239DBDC6 /* Pods-VenPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenPro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VenPro/Pods-VenPro.debug.xcconfig"; sourceTree = "<group>"; };
 		D0DF7E0524B6600E00A77E3A /* VenPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VenPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0DF7E0824B6600E00A77E3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0DF7E0A24B6600E00A77E3A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,8 @@
 			children = (
 				37E3AB72A756A690041517D2 /* Pods-VenPro.debug.xcconfig */,
 				20DADAE1982B2208A0A561C1 /* Pods-VenPro.release.xcconfig */,
+				BB5217EEE6BC665C239DBDC6 /* Pods-VenPro.debug.xcconfig */,
+				8FEDC6A70B38D5F33E467AF9 /* Pods-VenPro.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -220,15 +224,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-VenPro-checkManifestLockResult.txt",
 			);
