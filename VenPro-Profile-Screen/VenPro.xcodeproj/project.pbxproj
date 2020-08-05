@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,7 @@
 		D0DF7E1024B6600E00A77E3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0DF7E0E24B6600E00A77E3A /* Main.storyboard */; };
 		D0DF7E1224B6600F00A77E3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DF7E1124B6600F00A77E3A /* Assets.xcassets */; };
 		D0DF7E1524B6600F00A77E3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0DF7E1324B6600F00A77E3A /* LaunchScreen.storyboard */; };
+		F99FC43924DB0BE4004B1851 /* MenuListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99FC43824DB0BE4004B1851 /* MenuListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		D0DF7E1124B6600F00A77E3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0DF7E1424B6600F00A77E3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0DF7E1624B6600F00A77E3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F99FC43824DB0BE4004B1851 /* MenuListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				3EBE55B624BAABA4001C0CB0 /* AttendeeTableViewCell.swift */,
+				F99FC43824DB0BE4004B1851 /* MenuListController.swift */,
 				3EBE55B224BAA84E001C0CB0 /* AttendeeData.swift */,
 			);
 			path = Models;
@@ -282,6 +285,7 @@
 				3E6B23D124BE509900F238BE /* TextVerificationViewController.swift in Sources */,
 				3EE1478024BFB48C00BF32BE /* DetailedAttendeeViewController.swift in Sources */,
 				3EBE55B724BAABA4001C0CB0 /* AttendeeTableViewCell.swift in Sources */,
+				F99FC43924DB0BE4004B1851 /* MenuListController.swift in Sources */,
 				3EBE55B324BAA84E001C0CB0 /* AttendeeData.swift in Sources */,
 				D0DF7E0D24B6600E00A77E3A /* ProfileViewController.swift in Sources */,
 				3E6B23D324BE50CD00F238BE /* EventInfoViewController.swift in Sources */,
