@@ -15,9 +15,8 @@ import FirebaseAuth
 class LoginViewController: UIViewController, AuthUIDelegate {
 
     
-    @IBOutlet weak var userNumber: UITextField!
     
-    lazy var phoneNumber = "+1\(String(describing: userNumber.text))"
+//    lazy var phoneNumber = "+1\(String(describing: userNumber.text))"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +24,12 @@ class LoginViewController: UIViewController, AuthUIDelegate {
     
     @IBAction func SignupButtonPressed(_ sender: Any) {
         
-        self.performSegue(withIdentifier: "GoToAccountCreationScreen", sender: self)
+//        self.performSegue(withIdentifier: "GoToAccountCreationScreen", sender: self)
     }
     
     @IBAction func LoginButtonPressed(_ sender: Any) {
         
-        PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { (verificationID, error) in
+//        PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { (verificationID, error) in
 //   if let error = error {
 //    self.showMessagePrompt(error.localizedDescription)
 //        return
@@ -39,7 +38,7 @@ class LoginViewController: UIViewController, AuthUIDelegate {
    // ...
  }
         
-       self.performSegue(withIdentifier: "LoggedIn", sender: self)
-}
+//       self.performSegue(withIdentifier: "LoggedIn", sender: self)
+//}
     
 }
