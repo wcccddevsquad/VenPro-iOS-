@@ -14,9 +14,9 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController, AuthUIDelegate {
 
+    @IBOutlet weak var userTelephoneNumber: UITextField!
     
     
-//    lazy var phoneNumber = "+1\(String(describing: userNumber.text))"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,21 +24,27 @@ class LoginViewController: UIViewController, AuthUIDelegate {
     
     @IBAction func SignupButtonPressed(_ sender: Any) {
         
-//        self.performSegue(withIdentifier: "GoToAccountCreationScreen", sender: self)
+        self.performSegue(withIdentifier: "submitSegue", sender: self)
     }
     
     @IBAction func LoginButtonPressed(_ sender: Any) {
         
-//        PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { (verificationID, error) in
-//   if let error = error {
-//    self.showMessagePrompt(error.localizedDescription)
-//        return
-//   }
-   // Sign in using the verificationID and the code sent to the user
-   // ...
- }
-        
-//       self.performSegue(withIdentifier: "LoggedIn", sender: self)
-//}
-    
+
+        let phoneNumber = userTelephoneNumber.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { (verificationID, error) in
+          if let error = error {
+//            self.showMessagePrompt(error.localizedDescription)
+            print(error)
+            return
+          } else {
+          // Sign in using the verificationID and the code sent to the user
+            UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
+            print("Success!")
+            }
+        }
+
+       self.performSegue(withIdentifier: "textVerify", sender: self)
+}
+    let verificationID = UserDefaults.standard.string(forKey: "authVerificationID")
 }
