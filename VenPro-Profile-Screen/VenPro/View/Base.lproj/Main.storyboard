@@ -12,7 +12,7 @@
             <objects>
                 <viewController id="ivu-dH-601" customClass="EventInfoViewController" customModule="VenPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V2O-rJ-fgl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCF-n1-cRl">
@@ -73,7 +73,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Join Event"/>
                                 <connections>
-                                    <segue destination="oTW-om-vVU" kind="show" id="FIb-63-eQC"/>
+                                    <segue destination="oTW-om-vVU" kind="show" identifier="GoToAttendeeList" id="FIb-63-eQC"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="WKs-89-joB">
@@ -138,7 +138,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="tNI-yR-hP9">
-                        <barButtonItem key="leftBarButtonItem" title="Hamburger" id="eks-SZ-ojS">
+                        <barButtonItem key="leftBarButtonItem" image="line.horizontal.3" catalog="system" id="eks-SZ-ojS">
                             <connections>
                                 <action selector="didTapMenu" destination="BYZ-38-t0r" id="3oA-cq-3Lt"/>
                             </connections>
@@ -148,6 +148,7 @@
                         <outlet property="aboutMeField" destination="RwB-vQ-Fc9" id="j8v-Oj-Zsa"/>
                         <outlet property="nickName" destination="s6t-P3-Y3n" id="yTM-ib-caU"/>
                         <outlet property="profileImage" destination="zfm-wp-ico" id="tfT-sI-JrU"/>
+                        <segue destination="ivu-dH-601" kind="show" identifier="GoToEventInfo" id="Dex-Id-xqW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -547,6 +548,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="line.horizontal.3" catalog="system" width="64" height="32"/>
         <image name="person" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
