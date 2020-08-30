@@ -7,6 +7,7 @@
 //
 import SideMenu
 import UIKit
+import FirebaseUI
 
 
 
@@ -86,6 +87,12 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
             } else if named == "event info"{
                 self?.performSegue(withIdentifier: "GoToEventInfo", sender: self)
             } else if named == "logout" {
+                    let firebaseAuth = Auth.auth()
+                do {
+                  try firebaseAuth.signOut()
+                } catch let signOutError as NSError {
+                  print ("Error signing out: %@", signOutError)
+                }
                 
             }
         })

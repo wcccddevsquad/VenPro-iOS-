@@ -349,7 +349,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nickname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cNR-EY-fJa">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cNR-EY-fJa">
                                                 <rect key="frame" x="0.0" y="386.33333333333331" width="374" height="76.666666666666686"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -379,6 +379,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zew-mX-l9p">
                                                         <rect key="frame" x="187" y="0.0" width="187" height="76.666666666666671"/>
                                                         <state key="normal" title="Clear"/>
+                                                        <connections>
+                                                            <action selector="clearButtonPushed:" destination="7B6-h4-fbS" eventType="touchUpInside" id="MHp-Fb-eSH"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -398,7 +401,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="4Mc-f9-hc1"/>
                     <connections>
-                        <outlet property="userTelephoneNumber" destination="Ieq-aU-pxP" id="esa-lp-QQt"/>
+                        <outlet property="emailTextField" destination="qCG-Ko-Hm9" id="co5-lO-czg"/>
+                        <outlet property="firstnameTextField" destination="LXR-sx-5aD" id="p1M-ld-e32"/>
+                        <outlet property="lastNameTextField" destination="9dS-4s-lDU" id="zuv-ZI-xbM"/>
+                        <outlet property="userName" destination="cNR-EY-fJa" id="tkz-k5-GOX"/>
+                        <outlet property="userTelephoneNumberTextField" destination="Ieq-aU-pxP" id="esa-lp-QQt"/>
                         <segue destination="LB0-P9-0LJ" kind="show" identifier="textVerifySegue" id="1vp-0v-wNT"/>
                     </connections>
                 </viewController>
@@ -552,6 +559,6 @@
         <image name="person" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Jza-oj-BR0"/>
+        <segue reference="1vp-0v-wNT"/>
     </inferredMetricsTieBreakers>
 </document>
