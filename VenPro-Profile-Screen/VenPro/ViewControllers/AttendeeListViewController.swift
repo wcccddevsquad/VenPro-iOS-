@@ -17,6 +17,8 @@ class AttendeeListViewController: UIViewController, UITableViewDataSource, UITab
 
     var users = [User]()
     
+    //var user = User()
+    
     fileprivate var _refHandle: DatabaseHandle!
 
     
@@ -35,8 +37,12 @@ class AttendeeListViewController: UIViewController, UITableViewDataSource, UITab
         return cell
     }
     
+    var messagesController: AttendeeListViewController?
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("I was tapped!")
+        let user = self.users[indexPath.row]
+        self.messagesController?.showChatControllerForUser(user: user)
         performSegue(withIdentifier: "AttendeeDetail", sender: nil)
     }
 
@@ -67,6 +73,13 @@ class AttendeeListViewController: UIViewController, UITableViewDataSource, UITab
             
         }, withCancel: nil)
     
+    }
+    
+    func showChatControllerForUser(user: User) {
+        let chatLogController = ChatLogController(collectionViewLayout: UICollectionViewFlowLayout())
+        chatLogController.user = user
+        //programically calling a segue
+        navigationController?.pushViewController(chatLogController, animated: true)
     }
     
 

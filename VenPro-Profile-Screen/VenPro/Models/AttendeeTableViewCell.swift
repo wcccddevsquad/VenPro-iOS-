@@ -13,7 +13,7 @@ class AttendeeTableViewCell: UITableViewCell {
     
     @IBOutlet weak var attendeeNameLabel: UILabel!
     
-    func update(with attendee: Attendee) {
-        attendeeNameLabel.text = attendee.name
+    func update(with attendee: User) {
+        attendeeNameLabel.text = attendee.userName
     }
 }
