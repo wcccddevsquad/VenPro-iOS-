@@ -47,7 +47,7 @@ class CreateAccountViewController: UIViewController, AuthUIDelegate {
                 self.performSegue(withIdentifier: "textVerifySegue", sender: self)
                 print("Success!")
                 
-                }
+        }
         
 
 

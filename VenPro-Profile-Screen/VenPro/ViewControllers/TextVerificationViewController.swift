@@ -19,7 +19,11 @@ class TextVerificationViewController: UIViewController {
     
     @IBAction func SubmitVerificationButton(_ sender: Any) {
         
-        let verificationCode = verifyCodeTextField.text!
+        
+        
+//        let verificationCode = verifyCodeTextField.text!
+        let verificationCode = "654321"
+        
         
         let defaults = UserDefaults.standard
         
