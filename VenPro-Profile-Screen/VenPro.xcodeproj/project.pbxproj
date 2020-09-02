@@ -25,7 +25,7 @@
 		D0DF7E1224B6600F00A77E3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DF7E1124B6600F00A77E3A /* Assets.xcassets */; };
 		D0DF7E1524B6600F00A77E3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0DF7E1324B6600F00A77E3A /* LaunchScreen.storyboard */; };
 		F98B7F5524FF0696009E6DE8 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B7F5424FF0696009E6DE8 /* RoundButton.swift */; };
-		F98B7F5724FF08CF009E6DE8 /* DrinkMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B7F5624FF08CE009E6DE8 /* DrinkMenuViewController.swift */; };
+		F98B7F59250063A4009E6DE8 /* DrinkMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B7F58250063A4009E6DE8 /* DrinkMenuViewController.swift */; };
 		F99FC43924DB0BE4004B1851 /* MenuListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99FC43824DB0BE4004B1851 /* MenuListController.swift */; };
 		F9F7C35224FE91F2002698A7 /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F7C35124FE91F2002698A7 /* ChatLogController.swift */; };
 /* End PBXBuildFile section */
@@ -56,7 +56,7 @@
 		D0DF7E1424B6600F00A77E3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0DF7E1624B6600F00A77E3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F98B7F5424FF0696009E6DE8 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundButton.swift; path = ../../../../../DrinkMenu/DrinkMenu/RoundButton.swift; sourceTree = "<group>"; };
-		F98B7F5624FF08CE009E6DE8 /* DrinkMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DrinkMenuViewController.swift; path = ../../../../../DrinkMenu/DrinkMenu/DrinkMenuViewController.swift; sourceTree = "<group>"; };
+		F98B7F58250063A4009E6DE8 /* DrinkMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkMenuViewController.swift; sourceTree = "<group>"; };
 		F99FC43824DB0BE4004B1851 /* MenuListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListController.swift; sourceTree = "<group>"; };
 		F9F7C35124FE91F2002698A7 /* ChatLogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,9 +76,9 @@
 		3E9B03A024BAC0FE00267EDD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F98B7F58250063A4009E6DE8 /* DrinkMenuViewController.swift */,
 				F98B7F5424FF0696009E6DE8 /* RoundButton.swift */,
 				3E6B23CC24BE506000F238BE /* LoginViewController.swift */,
-				F98B7F5624FF08CE009E6DE8 /* DrinkMenuViewController.swift */,
 				3E6B23CE24BE506E00F238BE /* CreateAccountViewController.swift */,
 				3E6B23D024BE509900F238BE /* TextVerificationViewController.swift */,
 				3E6B23D224BE50CD00F238BE /* EventInfoViewController.swift */,
@@ -297,7 +297,7 @@
 				3E6B23CD24BE506000F238BE /* LoginViewController.swift in Sources */,
 				3E6B23D124BE509900F238BE /* TextVerificationViewController.swift in Sources */,
 				3EE1478024BFB48C00BF32BE /* DetailedAttendeeViewController.swift in Sources */,
-				F98B7F5724FF08CF009E6DE8 /* DrinkMenuViewController.swift in Sources */,
+				F98B7F59250063A4009E6DE8 /* DrinkMenuViewController.swift in Sources */,
 				3EBE55B724BAABA4001C0CB0 /* AttendeeTableViewCell.swift in Sources */,
 				F99FC43924DB0BE4004B1851 /* MenuListController.swift in Sources */,
 				F98B7F5524FF0696009E6DE8 /* RoundButton.swift in Sources */,

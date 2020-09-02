@@ -17,12 +17,15 @@ class AttendeeListViewController: UIViewController, UITableViewDataSource, UITab
 
     var users = [User]()
     
-    //var user = User()
+    var name = "name"
+    
+    var user: User?
     
     fileprivate var _refHandle: DatabaseHandle!
 
     
     @IBOutlet weak var tableView: UITableView!
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        attendees.count
@@ -37,13 +40,10 @@ class AttendeeListViewController: UIViewController, UITableViewDataSource, UITab
         return cell
     }
     
-    var messagesController: AttendeeListViewController?
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("I was tapped!")
-        let user = self.users[indexPath.row]
-        self.messagesController?.showChatControllerForUser(user: user)
-        performSegue(withIdentifier: "AttendeeDetail", sender: nil)
+        var user = self.users[indexPath.row]
+        getUsersName(user: user)
+        showChatControllerForUser(user: user)
     }
 
     override func viewDidLoad() {
@@ -60,13 +60,18 @@ class AttendeeListViewController: UIViewController, UITableViewDataSource, UITab
             
             if let dictionary = snapshot.value as? [String: Any] {
                 let user = User()
+                
 //                user.setValuesForKeys(dictionary)
+                user.id = snapshot.key
+                print("the user id is \(user.id)")
                 user.firstName = dictionary["firstName"] as? String
                 user.lastName = dictionary["lastName"] as? String
                 user.email = dictionary["email"] as? String
                 user.userName = dictionary["userName"] as? String
                 self.users.append(user)
                 self.tableView.reloadData()
+                
+                
             }
             
             print(snapshot)
@@ -76,13 +81,31 @@ class AttendeeListViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func showChatControllerForUser(user: User) {
-        let chatLogController = ChatLogController(collectionViewLayout: UICollectionViewFlowLayout())
-        chatLogController.user = user
-        //programically calling a segue
-        navigationController?.pushViewController(chatLogController, animated: true)
+        let AttendeeDetailScreen = DetailedAttendeeViewController()
+        AttendeeDetailScreen.user = user
+        performSegue(withIdentifier: "AttendeeDetail", sender: nil)
+        navigationItem.title = user.firstName
     }
     
+    
+    func getUsersName(user: User) -> String? {
+        let chatLogController = ChatLogController()
+        let AttendeeDetailScreen = DetailedAttendeeViewController()
+        chatLogController.user = user
+        name = user.firstName ?? "CameUpNil"
+        AttendeeDetailScreen.name = name
+        return name
+    }
+    
+    //check later if this actually does anyhting and if I can delete
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "AttendeeDetail") {
+            let AttendeeVC = segue.destination as! DetailedAttendeeViewController
+            
+            AttendeeVC.name = name
 
+        }
+    }
 
 
 }
