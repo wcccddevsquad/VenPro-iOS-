@@ -9,22 +9,29 @@
 import UIKit
 
 class DetailedAttendeeViewController: UIViewController {
-
+    
+    
+    @IBAction func messageButtonPressed(_ sender: Any) {
+        showChatController()
+    }
+    
+    
+    @IBAction func DrinkMenuPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "DrinkMenuSegue", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    var messagesController: AttendeeListViewController?
+    
+    func showChatController() {
+        let chatLogController = ChatLogController(collectionViewLayout: UICollectionViewFlowLayout())
+        
+        //programically calling a segue
+        navigationController?.pushViewController(chatLogController, animated: true)
     }
-    */
-
 }
