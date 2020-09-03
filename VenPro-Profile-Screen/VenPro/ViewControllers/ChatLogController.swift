@@ -8,14 +8,19 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
+import FirebaseAuth
 
 class ChatLogController: UICollectionViewController, UITextFieldDelegate {
+    
+    let attendeeDetails = DetailedAttendeeViewController()
     
     var user: User? {
         didSet {
             navigationItem.title = user?.firstName
         }
     }
+    
     
     lazy var inputTextField: UITextField = {
         //programically creating text field
@@ -30,10 +35,11 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       // navigationItem.title = "Chat Log Controller"
         collectionView?.backgroundColor = .white
         
         setupInputComponents()
+        
+        observeMessages()
     }
     
     func setupInputComponents() {
@@ -88,7 +94,10 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate {
     @objc func handleSend() {
         let ref = Database.database().reference().child("messages")
         let childRef = ref.childByAutoId()
-        let values = ["text": inputTextField.text!, "name": "placeHolderName"]
+        // let toId = user!.toId!
+        //let timestamp = String(NSDate().timeIntervalSince1970)
+        //let fromID = Auth.auth().currentUser?.uid
+        let values = ["text": inputTextField.text!]
         childRef.updateChildValues(values)
         
         
@@ -99,6 +108,13 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         handleSend()
         return true
+    }
+    
+    func observeMessages() {
+        let ref = Database.database().reference().child("messages")
+        ref.observe(.childAdded, with: { (snapshot) in
+            print (snapshot)
+        }, withCancel:  nil)
     }
 
 }

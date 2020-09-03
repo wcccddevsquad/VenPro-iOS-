@@ -7,12 +7,25 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class DetailedAttendeeViewController: UIViewController {
+    
+    let attendeeList = AttendeeListViewController()
+    
+    var name: String?
+    
+    var user: User? {
+        didSet {
+            navigationItem.title = user?.firstName
+        }
+    }
     
     
     @IBAction func messageButtonPressed(_ sender: Any) {
         showChatController()
+        
     }
     
     
@@ -22,7 +35,8 @@ class DetailedAttendeeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationItem.title = name
+        
         // Do any additional setup after loading the view.
     }
     
@@ -30,8 +44,9 @@ class DetailedAttendeeViewController: UIViewController {
     
     func showChatController() {
         let chatLogController = ChatLogController(collectionViewLayout: UICollectionViewFlowLayout())
-        
-        //programically calling a segue
-        navigationController?.pushViewController(chatLogController, animated: true)
+        chatLogController.navigationItem.title = name
+          navigationController?.pushViewController(chatLogController, animated: true)
+          navigationItem.title = name
     }
+    
 }

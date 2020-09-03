@@ -63,9 +63,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24.333333333333332" id="wcK-G0-N1b"/>
                                 </constraints>
-                                <items>
-                                    <navigationItem title="Profile Screen" id="PJQ-9B-RlA"/>
-                                </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvr-sQ-LM9">
                                 <rect key="frame" x="171.66666666666666" y="615" width="71" height="30"/>
@@ -100,16 +97,16 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQc-3P-8cX">
-                                        <rect key="frame" x="130" y="234" width="74.333333333333314" height="4.3333333333333428"/>
+                                        <rect key="frame" x="130" y="234" width="74.333333333333314" height="15"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="4.3333333333333428" id="x8Y-ao-Q9G"/>
+                                            <constraint firstAttribute="height" constant="15" id="x8Y-ao-Q9G"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This is just information about myself. I'm looking for a good time." translatesAutoresizingMaskIntoConstraints="NO" id="RwB-vQ-Fc9">
-                                        <rect key="frame" x="47" y="250.33333333333337" width="240" height="163.66666666666663"/>
+                                        <rect key="frame" x="47" y="261" width="240" height="153"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -164,7 +161,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z3s-5U-fJj">
-                                <rect key="frame" x="8" y="230" width="398" height="486"/>
+                                <rect key="frame" x="8" y="260" width="398" height="456"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="attendeeCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="attendeeCell" id="EeZ-ew-p3v" customClass="AttendeeTableViewCell" customModule="VenPro" customModuleProvider="target">
@@ -206,7 +203,7 @@
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Eg9-Th-jYA">
-                                <rect key="frame" x="20" y="76" width="374" height="104"/>
+                                <rect key="frame" x="20" y="106" width="374" height="104"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VenPro Event" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2e-r3-hWr">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="48"/>
@@ -230,7 +227,7 @@
                             <constraint firstItem="yHy-Wf-QZL" firstAttribute="trailing" secondItem="Eg9-Th-jYA" secondAttribute="trailing" constant="20" id="4Qn-fy-yRh"/>
                             <constraint firstItem="Z3s-5U-fJj" firstAttribute="leading" secondItem="yHy-Wf-QZL" secondAttribute="leading" constant="8" id="gYq-ZJ-eNg"/>
                             <constraint firstItem="Eg9-Th-jYA" firstAttribute="leading" secondItem="yHy-Wf-QZL" secondAttribute="leading" constant="20" id="hcW-WG-ClZ"/>
-                            <constraint firstItem="Eg9-Th-jYA" firstAttribute="top" secondItem="yHy-Wf-QZL" secondAttribute="top" constant="20" id="obE-tj-Cwq"/>
+                            <constraint firstItem="Eg9-Th-jYA" firstAttribute="top" secondItem="yHy-Wf-QZL" secondAttribute="top" constant="50" id="obE-tj-Cwq"/>
                             <constraint firstItem="yHy-Wf-QZL" firstAttribute="bottom" secondItem="Z3s-5U-fJj" secondAttribute="bottom" id="pcb-7i-Usp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yHy-Wf-QZL"/>
@@ -305,7 +302,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wK3-p9-6v4"/>
                     </view>
-                    <navigationItem key="navigationItem" id="LNn-a0-WAb"/>
+                    <navigationItem key="navigationItem" id="EhI-in-S6C"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A8Y-iS-N6a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -576,21 +573,21 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alcholic Drinks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHs-Rx-Rxu">
-                                <rect key="frame" x="130" y="62" width="114" height="21"/>
+                                <rect key="frame" x="150" y="85" width="114" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Non-Alcholic Drinks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wr-wp-lT8">
-                                <rect key="frame" x="111" y="337" width="152" height="21"/>
+                                <rect key="frame" x="131" y="360" width="152" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ad1-Os-gBB" customClass="RoundButton" customModule="DrinkMenu" customModuleProvider="target">
-                                <rect key="frame" x="16" y="91" width="100" height="100"/>
+                                <rect key="frame" x="36" y="114" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0022636079230000002" green="0.55341476199999995" blue="0.55712968110000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Margarita">
@@ -609,7 +606,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgX-wG-Rid" customClass="RoundButton" customModule="DrinkMenu" customModuleProvider="target">
-                                <rect key="frame" x="137" y="91" width="100" height="100"/>
+                                <rect key="frame" x="157" y="114" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0022636079230000002" green="0.55341476199999995" blue="0.55712968110000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Beer">
@@ -631,7 +628,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZO-EF-d6w" customClass="RoundButton" customModule="DrinkMenu" customModuleProvider="target">
-                                <rect key="frame" x="259" y="91" width="100" height="100"/>
+                                <rect key="frame" x="279" y="114" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0022636079230000002" green="0.55341476199999995" blue="0.55712968110000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Cosmo">
@@ -653,7 +650,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOb-uv-CTS" customClass="RoundButton" customModule="DrinkMenu" customModuleProvider="target">
-                                <rect key="frame" x="16" y="207" width="100" height="100"/>
+                                <rect key="frame" x="36" y="230" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0022636079230000002" green="0.55341476199999995" blue="0.55712968110000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Martini">
@@ -675,7 +672,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sx9-x1-lWm" customClass="RoundButton" customModule="DrinkMenu" customModuleProvider="target">
-                                <rect key="frame" x="144" y="207" width="100" height="100"/>
+                                <rect key="frame" x="164" y="230" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0022636079230000002" green="0.55341476199999995" blue="0.55712968110000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Daiquiri">
@@ -697,7 +694,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDO-i2-cm4" customClass="RoundButton" customModule="DrinkMenu" customModuleProvider="target">
-                                <rect key="frame" x="259" y="207" width="100" height="100"/>
+                                <rect key="frame" x="279" y="230" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0022636079230000002" green="0.55341476199999995" blue="0.55712968110000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Whiskey">
@@ -719,7 +716,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aF7-yh-CK9" customClass="RoundButton" customModule="DrinkMenu" customModuleProvider="target">
-                                <rect key="frame" x="16" y="366" width="100" height="100"/>
+                                <rect key="frame" x="36" y="389" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0022636079230000002" green="0.55341476199999995" blue="0.55712968110000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Coke">
@@ -741,7 +738,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWH-SV-kMk" customClass="RoundButton" customModule="DrinkMenu" customModuleProvider="target">
-                                <rect key="frame" x="144" y="366" width="100" height="100"/>
+                                <rect key="frame" x="164" y="389" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0022636079230000002" green="0.55341476199999995" blue="0.55712968110000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Sprite">
@@ -763,7 +760,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWQ-df-vfB" customClass="RoundButton" customModule="DrinkMenu" customModuleProvider="target">
-                                <rect key="frame" x="259" y="366" width="100" height="100"/>
+                                <rect key="frame" x="279" y="389" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0022636079230000002" green="0.55341476199999995" blue="0.55712968110000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Mountain Dew">
@@ -785,7 +782,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5d-dQ-j10" customClass="RoundButton" customModule="DrinkMenu" customModuleProvider="target">
-                                <rect key="frame" x="16" y="486" width="100" height="100"/>
+                                <rect key="frame" x="36" y="509" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0022636079230000002" green="0.55341476199999995" blue="0.55712968110000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Diet Coke">
@@ -807,7 +804,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3a-Jr-OYe" customClass="RoundButton" customModule="DrinkMenu" customModuleProvider="target">
-                                <rect key="frame" x="144" y="486" width="100" height="100"/>
+                                <rect key="frame" x="164" y="509" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0022636079230000002" green="0.55341476199999995" blue="0.55712968110000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Fanta">
@@ -829,7 +826,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTa-UI-3Sa" customClass="RoundButton" customModule="DrinkMenu" customModuleProvider="target">
-                                <rect key="frame" x="259" y="486" width="100" height="100"/>
+                                <rect key="frame" x="279" y="509" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0022636079230000002" green="0.55341476199999995" blue="0.55712968110000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Water">
@@ -858,7 +855,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oKK-ef-0FJ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4410" y="1525"/>
+            <point key="canvasLocation" x="4480" y="1604"/>
         </scene>
     </scenes>
     <resources>
