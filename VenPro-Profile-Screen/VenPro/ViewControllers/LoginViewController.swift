@@ -43,8 +43,8 @@ class LoginViewController: UIViewController, AuthUIDelegate {
     @IBAction func LoginButtonPressed(_ sender: Any) {
         
 
-//        let phoneNumber = userTelephoneNumber.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let phoneNumber = "+17864561234" 
+        let phoneNumber = userTelephoneNumber.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+//        let phoneNumber = "+17864561234" 
 
         PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { (verificationID, error) in
           if let error = error {
@@ -63,8 +63,13 @@ class LoginViewController: UIViewController, AuthUIDelegate {
         
 }
     let verificationID = UserDefaults.standard.string(forKey: "authVerificationID")
+    
+    
+    
 
     }
     
+
+
 
 

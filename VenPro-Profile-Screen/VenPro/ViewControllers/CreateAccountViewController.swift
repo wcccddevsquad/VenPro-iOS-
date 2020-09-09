@@ -22,36 +22,45 @@ class CreateAccountViewController: UIViewController, AuthUIDelegate {
     var ref: DatabaseReference!
     
     let user = Auth.auth().currentUser?.uid
+    
+    var firstName: String?
+    var lastName: String?
+    var phoneNumber: String?
+    var email: String?
+    var useRname: String?
 
     @IBAction func SubmitButtonPressed(_ sender: Any) {
         
-        let phoneNumber = userTelephoneNumberTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let firstName = firstnameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let useRname = userName.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+         phoneNumber = userTelephoneNumberTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+         firstName = firstnameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+         lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+         email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+         useRname = userName.text!.trimmingCharacters(in: .whitespacesAndNewlines)
 
         
-            PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { (verificationID, error) in
+        PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber!, uiDelegate: nil) { (verificationID, error) in
               if let error = error {
                 print(error)
                 return
               }
                 UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
                 self.ref = Database.database().reference()
-                self.ref.child("users").child(self.user!).setValue(["phoneNumber": phoneNumber,
-                                                                   "firstName": firstName,
-                                                                   "lastName": lastName,
-                                                                   "email": email,
-                                                                   "userName": useRname])
-                self.performSegue(withIdentifier: "textVerifySegue", sender: self)
-                print("Success!")
                 
         }
         
+        print("first name is \(firstName) before throw")
+//        let tvViewController = TextVerificationViewController()
+//        let profileScreen = ProfileViewController()
+//        tvViewController.firstName = firstName
+//        tvViewController.lastName = lastName
+//        tvViewController.email = email
+//        tvViewController.userName = useRname
+//        profileScreen.firstName = firstName
+        
+            performSegue(withIdentifier: "textVerifySegue", sender: self)
+            print("Success!")
 
-
-
+    
         
             }
     
@@ -77,5 +86,16 @@ class CreateAccountViewController: UIViewController, AuthUIDelegate {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if (segue.identifier == "textVerifySegue") {
+        let verificationVC = segue.destination as! TextVerificationViewController
+        
+        verificationVC.firstName = firstName
+        verificationVC.lastName = lastName
+        verificationVC.email = email
+        verificationVC.userName = useRname
+    }
+    
+    }
     
 }

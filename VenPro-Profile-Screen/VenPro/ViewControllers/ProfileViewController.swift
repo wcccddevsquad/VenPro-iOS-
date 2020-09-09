@@ -19,6 +19,15 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
     private let eventInfoController = EventInfoViewController()
     private var menu: SideMenuNavigationController?
     
+    var user = User()
+    
+    var account = CreateAccountViewController()
+    
+    
+    var firstName: String?
+    
+    
+    
     
     @IBOutlet weak var nickName: UITextField!
     
@@ -60,9 +69,13 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let menuList = MenuListController(with: ["attendee list", "event info", "logout"])
         
+        addUsernameInNavigation()
+        let menuList = MenuListController(with: ["attendee list", "event info", "logout"])
         menuList.delegate = self
+        
+        print("users uid is \(account.user)")
+        navigationItem.title = firstName
         
         menu = SideMenuNavigationController(rootViewController: menuList)
         
@@ -88,14 +101,98 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
                 self?.performSegue(withIdentifier: "GoToEventInfo", sender: self)
             } else if named == "logout" {
                     let firebaseAuth = Auth.auth()
-                do {
-                  try firebaseAuth.signOut()
-                } catch let signOutError as NSError {
-                  print ("Error signing out: %@", signOutError)
-                }
+//                do {
+                    self?.handleLogout()
+//                  try firebaseAuth.signOut()
+//                } catch let signOutError as NSError {
+//                  print ("Error signing out: %@", signOutError)
+//                }
+                    self?.performSegue(withIdentifier: "returnToLoginScreen", sender: self)
                 
             }
         })
+    }
+    
+    
+    
+    func addUsernameInNavigation() {
+        if Auth.auth().currentUser?.uid == nil {
+            perform(#selector(handleLogout), with: nil, afterDelay: 0)
+        } else {
+            let uid = Auth.auth().currentUser?.uid
+            Database.database().reference().child("users").child(account.user!).observe(.value, with: { (snapshot) in
+                //printed so this is working up to this point
+                print(snapshot)
+                
+                if let dictionary = snapshot.value as? [String: Any] {
+                    self.navigationItem.title = dictionary["userName"] as? String
+                    //worked
+                    print("this works")
+                }
+                
+                
+            }, withCancel: nil)
+
+        }
+    }
+    
+    
+    @objc func handleLogout() {
+        do {
+            try Auth.auth().signOut()
+        } catch let logoutError {
+            print(logoutError)
+        }
+    }
+    
+    
+//    func createUserInDatabase() {
+//        
+//        guard let uid = account.userId else {
+//            return
+//        }
+//
+//        let firstName = account.firstName
+//        let lastName = account.lastName
+//        let phoneNumber = account.phoneNumber
+//        let email = account.email
+//        let userName = account.useRname
+//
+//
+//        let ref = Database.database().reference(fromURL: "https://venproios.firebaseio.com")
+//        let UsersReference = ref.child("users").child(uid)
+//        let values = ["phoneNumber": phoneNumber, "firstName": firstName, "lastName": lastName, "userName": userName, "email": email]
+//        UsersReference.updateChildValues(values, withCompletionBlock: {
+//            (err, ref) in
+//            
+//            if err != nil {
+//                print(err)
+//                return
+//            }
+//            print("saved user succesfully into database")
+//        })
+//    }
+    
+    //viewWillLoad will only load once this is to make sure the name updates
+    override func viewWillAppear(_ animated: Bool) {
+        CollectUsersDatabaseName()
+    }
+    
+    func CollectUsersDatabaseName() {
+        if Auth.auth().currentUser?.uid == nil {
+            perform(#selector(handleLogout), with: nil, afterDelay: 0)
+        } else {
+            let uid = Auth.auth().currentUser?.uid
+            Database.database().reference().child("users").child(uid!).observe(.value, with: { (snapshot) in
+                
+                print(snapshot)
+                
+                if let dictionary = snapshot.value as? [String: AnyObject] {
+                    self.navigationItem.title = dictionary["firstName"] as? String
+                }
+                
+            }, withCancel: nil)
+        }
     }
 
 }
