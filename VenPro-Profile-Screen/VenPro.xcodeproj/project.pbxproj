@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E5FED1C24FDB17C00B70FFF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5FED1B24FDB17C00B70FFF /* User.swift */; };
+		3E65D24D24CCDC1B000A99A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E65D24C24CCDC1B000A99A3 /* GoogleService-Info.plist */; };
 		3E6B23CD24BE506000F238BE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B23CC24BE506000F238BE /* LoginViewController.swift */; };
 		3E6B23CF24BE506E00F238BE /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B23CE24BE506E00F238BE /* CreateAccountViewController.swift */; };
 		3E6B23D124BE509900F238BE /* TextVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B23D024BE509900F238BE /* TextVerificationViewController.swift */; };
@@ -14,7 +16,6 @@
 		3EBE55B324BAA84E001C0CB0 /* AttendeeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBE55B224BAA84E001C0CB0 /* AttendeeData.swift */; };
 		3EBE55B524BAA8F1001C0CB0 /* AttendeeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBE55B424BAA8F1001C0CB0 /* AttendeeListViewController.swift */; };
 		3EBE55B724BAABA4001C0CB0 /* AttendeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBE55B624BAABA4001C0CB0 /* AttendeeTableViewCell.swift */; };
-		3EC691CA24C7B66200D8D46E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EC691C924C7B66200D8D46E /* GoogleService-Info.plist */; };
 		3EE1478024BFB48C00BF32BE /* DetailedAttendeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE1477F24BFB48C00BF32BE /* DetailedAttendeeViewController.swift */; };
 		854522EBEE30A49FD34ED39C /* Pods_VenPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CADD932E0FBCEFB3BE7586A /* Pods_VenPro.framework */; };
 		D0DF7E0924B6600E00A77E3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DF7E0824B6600E00A77E3A /* AppDelegate.swift */; };
@@ -23,12 +24,19 @@
 		D0DF7E1024B6600E00A77E3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0DF7E0E24B6600E00A77E3A /* Main.storyboard */; };
 		D0DF7E1224B6600F00A77E3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DF7E1124B6600F00A77E3A /* Assets.xcassets */; };
 		D0DF7E1524B6600F00A77E3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0DF7E1324B6600F00A77E3A /* LaunchScreen.storyboard */; };
+		F98B7F5524FF0696009E6DE8 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B7F5424FF0696009E6DE8 /* RoundButton.swift */; };
+		F98B7F59250063A4009E6DE8 /* DrinkMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B7F58250063A4009E6DE8 /* DrinkMenuViewController.swift */; };
+		F99FC43924DB0BE4004B1851 /* MenuListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99FC43824DB0BE4004B1851 /* MenuListController.swift */; };
+		F9F7C35224FE91F2002698A7 /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F7C35124FE91F2002698A7 /* ChatLogController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		20DADAE1982B2208A0A561C1 /* Pods-VenPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenPro.release.xcconfig"; path = "Target Support Files/Pods-VenPro/Pods-VenPro.release.xcconfig"; sourceTree = "<group>"; };
 		37E3AB72A756A690041517D2 /* Pods-VenPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenPro.debug.xcconfig"; path = "Target Support Files/Pods-VenPro/Pods-VenPro.debug.xcconfig"; sourceTree = "<group>"; };
 		3CADD932E0FBCEFB3BE7586A /* Pods_VenPro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VenPro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E5FED1B24FDB17C00B70FFF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3E65D24B24CCCD02000A99A3 /* VenProDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VenProDebug.entitlements; sourceTree = "<group>"; };
+		3E65D24C24CCDC1B000A99A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3E6B23CC24BE506000F238BE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3E6B23CE24BE506E00F238BE /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		3E6B23D024BE509900F238BE /* TextVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextVerificationViewController.swift; sourceTree = "<group>"; };
@@ -36,8 +44,9 @@
 		3EBE55B224BAA84E001C0CB0 /* AttendeeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeData.swift; sourceTree = "<group>"; };
 		3EBE55B424BAA8F1001C0CB0 /* AttendeeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeListViewController.swift; sourceTree = "<group>"; };
 		3EBE55B624BAABA4001C0CB0 /* AttendeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeTableViewCell.swift; sourceTree = "<group>"; };
-		3EC691C924C7B66200D8D46E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3EE1477F24BFB48C00BF32BE /* DetailedAttendeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedAttendeeViewController.swift; sourceTree = "<group>"; };
+		8FEDC6A70B38D5F33E467AF9 /* Pods-VenPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenPro.release.xcconfig"; path = "Pods/Target Support Files/Pods-VenPro/Pods-VenPro.release.xcconfig"; sourceTree = "<group>"; };
+		BB5217EEE6BC665C239DBDC6 /* Pods-VenPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenPro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VenPro/Pods-VenPro.debug.xcconfig"; sourceTree = "<group>"; };
 		D0DF7E0524B6600E00A77E3A /* VenPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VenPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0DF7E0824B6600E00A77E3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0DF7E0A24B6600E00A77E3A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +55,10 @@
 		D0DF7E1124B6600F00A77E3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0DF7E1424B6600F00A77E3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0DF7E1624B6600F00A77E3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F98B7F5424FF0696009E6DE8 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundButton.swift; path = ../../../../../DrinkMenu/DrinkMenu/RoundButton.swift; sourceTree = "<group>"; };
+		F98B7F58250063A4009E6DE8 /* DrinkMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkMenuViewController.swift; sourceTree = "<group>"; };
+		F99FC43824DB0BE4004B1851 /* MenuListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListController.swift; sourceTree = "<group>"; };
+		F9F7C35124FE91F2002698A7 /* ChatLogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +76,8 @@
 		3E9B03A024BAC0FE00267EDD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F98B7F58250063A4009E6DE8 /* DrinkMenuViewController.swift */,
+				F98B7F5424FF0696009E6DE8 /* RoundButton.swift */,
 				3E6B23CC24BE506000F238BE /* LoginViewController.swift */,
 				3E6B23CE24BE506E00F238BE /* CreateAccountViewController.swift */,
 				3E6B23D024BE509900F238BE /* TextVerificationViewController.swift */,
@@ -70,6 +85,7 @@
 				D0DF7E0C24B6600E00A77E3A /* ProfileViewController.swift */,
 				3EBE55B424BAA8F1001C0CB0 /* AttendeeListViewController.swift */,
 				3EE1477F24BFB48C00BF32BE /* DetailedAttendeeViewController.swift */,
+				F9F7C35124FE91F2002698A7 /* ChatLogController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -77,7 +93,9 @@
 		3E9B03A124BAC12300267EDD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3E5FED1B24FDB17C00B70FFF /* User.swift */,
 				3EBE55B624BAABA4001C0CB0 /* AttendeeTableViewCell.swift */,
+				F99FC43824DB0BE4004B1851 /* MenuListController.swift */,
 				3EBE55B224BAA84E001C0CB0 /* AttendeeData.swift */,
 			);
 			path = Models;
@@ -88,8 +106,9 @@
 			children = (
 				37E3AB72A756A690041517D2 /* Pods-VenPro.debug.xcconfig */,
 				20DADAE1982B2208A0A561C1 /* Pods-VenPro.release.xcconfig */,
+				BB5217EEE6BC665C239DBDC6 /* Pods-VenPro.debug.xcconfig */,
+				8FEDC6A70B38D5F33E467AF9 /* Pods-VenPro.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -122,17 +141,26 @@
 		D0DF7E0724B6600E00A77E3A /* VenPro */ = {
 			isa = PBXGroup;
 			children = (
-				3E9B03A024BAC0FE00267EDD /* ViewControllers */,
+				3E65D24B24CCCD02000A99A3 /* VenProDebug.entitlements */,
 				3E9B03A124BAC12300267EDD /* Models */,
+				F9634E4324C8BFA7008DB6B1 /* View */,
+				3E9B03A024BAC0FE00267EDD /* ViewControllers */,
 				D0DF7E0824B6600E00A77E3A /* AppDelegate.swift */,
 				D0DF7E0A24B6600E00A77E3A /* SceneDelegate.swift */,
-				D0DF7E0E24B6600E00A77E3A /* Main.storyboard */,
 				D0DF7E1124B6600F00A77E3A /* Assets.xcassets */,
 				D0DF7E1324B6600F00A77E3A /* LaunchScreen.storyboard */,
-				3EC691C924C7B66200D8D46E /* GoogleService-Info.plist */,
 				D0DF7E1624B6600F00A77E3A /* Info.plist */,
+				3E65D24C24CCDC1B000A99A3 /* GoogleService-Info.plist */,
 			);
 			path = VenPro;
+			sourceTree = "<group>";
+		};
+		F9634E4324C8BFA7008DB6B1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D0DF7E0E24B6600E00A77E3A /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +175,7 @@
 				D0DF7E0224B6600E00A77E3A /* Frameworks */,
 				D0DF7E0324B6600E00A77E3A /* Resources */,
 				F5E6B0CA66FDD58EA0844FF9 /* [CP] Embed Pods Frameworks */,
+				B90BC8F56503BCCDD0897C8C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,8 +225,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0DF7E1524B6600F00A77E3A /* LaunchScreen.storyboard in Resources */,
-				3EC691CA24C7B66200D8D46E /* GoogleService-Info.plist in Resources */,
 				D0DF7E1224B6600F00A77E3A /* Assets.xcassets in Resources */,
+				3E65D24D24CCDC1B000A99A3 /* GoogleService-Info.plist in Resources */,
 				D0DF7E1024B6600E00A77E3A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,21 +239,34 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-VenPro-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B90BC8F56503BCCDD0897C8C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VenPro/Pods-VenPro-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VenPro/Pods-VenPro-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VenPro/Pods-VenPro-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F5E6B0CA66FDD58EA0844FF9 /* [CP] Embed Pods Frameworks */ = {
@@ -251,14 +293,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E5FED1C24FDB17C00B70FFF /* User.swift in Sources */,
 				3E6B23CD24BE506000F238BE /* LoginViewController.swift in Sources */,
 				3E6B23D124BE509900F238BE /* TextVerificationViewController.swift in Sources */,
 				3EE1478024BFB48C00BF32BE /* DetailedAttendeeViewController.swift in Sources */,
+				F98B7F59250063A4009E6DE8 /* DrinkMenuViewController.swift in Sources */,
 				3EBE55B724BAABA4001C0CB0 /* AttendeeTableViewCell.swift in Sources */,
+				F99FC43924DB0BE4004B1851 /* MenuListController.swift in Sources */,
+				F98B7F5524FF0696009E6DE8 /* RoundButton.swift in Sources */,
 				3EBE55B324BAA84E001C0CB0 /* AttendeeData.swift in Sources */,
 				D0DF7E0D24B6600E00A77E3A /* ProfileViewController.swift in Sources */,
 				3E6B23D324BE50CD00F238BE /* EventInfoViewController.swift in Sources */,
 				3E6B23CF24BE506E00F238BE /* CreateAccountViewController.swift in Sources */,
+				F9F7C35224FE91F2002698A7 /* ChatLogController.swift in Sources */,
 				D0DF7E0924B6600E00A77E3A /* AppDelegate.swift in Sources */,
 				3EBE55B524BAA8F1001C0CB0 /* AttendeeListViewController.swift in Sources */,
 				D0DF7E0B24B6600E00A77E3A /* SceneDelegate.swift in Sources */,
@@ -406,14 +453,16 @@
 			baseConfigurationReference = 37E3AB72A756A690041517D2 /* Pods-VenPro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = VenPro/VenProDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M66SZHU25T;
+				DEVELOPMENT_TEAM = W79AL69X59;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = VenPro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.VenPro.VenPro;
+				PRODUCT_BUNDLE_IDENTIFIER = com.VenPro.VenPro2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -426,7 +475,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M66SZHU25T;
+				DEVELOPMENT_TEAM = W79AL69X59;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = VenPro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

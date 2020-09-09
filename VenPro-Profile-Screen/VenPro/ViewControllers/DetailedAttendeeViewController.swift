@@ -7,24 +7,46 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class DetailedAttendeeViewController: UIViewController {
-
+    
+    let attendeeList = AttendeeListViewController()
+    
+    var name: String?
+    
+    var user: User? {
+        didSet {
+            navigationItem.title = user?.firstName
+        }
+    }
+    
+    
+    @IBAction func messageButtonPressed(_ sender: Any) {
+        showChatController()
+        
+    }
+    
+    
+    @IBAction func DrinkMenuPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "DrinkMenuSegue", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationItem.title = name
+        
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    var messagesController: AttendeeListViewController?
+    
+    func showChatController() {
+        let chatLogController = ChatLogController(collectionViewLayout: UICollectionViewFlowLayout())
+        chatLogController.navigationItem.title = name
+          navigationController?.pushViewController(chatLogController, animated: true)
+          navigationItem.title = name
     }
-    */
-
+    
 }

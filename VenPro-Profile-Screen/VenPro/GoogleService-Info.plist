@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1057417154906-i3dekkf2u19qtbhccunt25t3lofa7120.apps.googleusercontent.com</string>
+	<string>1057417154906-2dr1dnd0ht4q119qjh3gnsrm30d4vb3s.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1057417154906-i3dekkf2u19qtbhccunt25t3lofa7120</string>
+	<string>com.googleusercontent.apps.1057417154906-2dr1dnd0ht4q119qjh3gnsrm30d4vb3s</string>
 	<key>API_KEY</key>
 	<string>AIzaSyAP31o0GjHuasQmQ29QnHILus_vV0GTwiA</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,23 +13,23 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.VenPro.VenPro</string>
+	<string>com.VenPro.VenPro2</string>
 	<key>PROJECT_ID</key>
 	<string>venproios</string>
 	<key>STORAGE_BUCKET</key>
 	<string>venproios.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<true/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1057417154906:ios:e0d4343cb273eaffd8a363</string>
+	<string>1:1057417154906:ios:5ac31cc97aae3ee1d8a363</string>
 	<key>DATABASE_URL</key>
 	<string>https://venproios.firebaseio.com</string>
 </dict>
