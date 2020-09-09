@@ -14,15 +14,29 @@ class TextVerificationViewController: UIViewController {
 
     @IBOutlet weak var verifyCodeTextField: UITextField!
     
+    var ref: DatabaseReference!
+    
     let db = Firestore.firestore()
+    
+    let accountInfo = CreateAccountViewController()
+    
+    var firstName: String?
+    
+    var lastName: String?
+    
+    var email: String?
+    
+    var phoneNumber: String?
+    
+    var userName: String?
 
     
     @IBAction func SubmitVerificationButton(_ sender: Any) {
         
         
         
-//        let verificationCode = verifyCodeTextField.text!
-        let verificationCode = "654321"
+        let verificationCode = verifyCodeTextField.text!
+//        let verificationCode = "654321"
         
         
         let defaults = UserDefaults.standard
@@ -36,6 +50,12 @@ class TextVerificationViewController: UIViewController {
         if error != nil {
             print("Error")
         } else {
+            
+            self.createUserInDatabase()
+            
+            //comes up nil
+            print("name is currently \(self.firstName)")
+            
             self.performSegue(withIdentifier: "profileSegue", sender: self)
             print("User successfully created")
 //            db.collection("users").addDocument(data: ["firstname": "Bruce", "lastname": "Wayne"])
@@ -73,6 +93,27 @@ class TextVerificationViewController: UIViewController {
                 }
             }
         }
+        
+        print("name is \(firstName) after throw")
     }
+    
+    func createUserInDatabase() {
+    var uid = Auth.auth().currentUser?.uid
+//
+//        ref = Database.database().reference(fromURL: "https://venproios.firebaseio.com/")
+//       let values = (["phoneNumber": phoneNumber, "firstName": firstName, "lastName": lastName, "email": email, "userName": userName])
+//        ref.updateChildValues(values, withCompletionBlock: { (err, ref) in
+//            if err != nil {
+//                print(err)
+//                return
+//            }
+//
+//
+//        })
+        
+        ref = Database.database().reference()
+        ref.child("users").child(uid!).setValue(["phoneNumber": phoneNumber, "firstName": firstName, "lastName": lastName, "email": email, "userName": userName])
+    }
+    
 
 }
