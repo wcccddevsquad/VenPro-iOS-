@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DrinkMenuViewController.swift
 //  DrinkMenu
 //
 //  Created by Fariha Hussain on 8/31/20.
@@ -56,3 +56,4 @@ class DrinkMenuViewController: UIViewController {
     
     
 }
+

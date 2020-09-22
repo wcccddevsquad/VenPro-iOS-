@@ -81,8 +81,10 @@ class AttendeeListViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func showChatControllerForUser(user: User) {
+        let chatLogController = ChatLogController()
         let AttendeeDetailScreen = DetailedAttendeeViewController()
         AttendeeDetailScreen.user = user
+        chatLogController.user = user
         performSegue(withIdentifier: "AttendeeDetail", sender: nil)
         navigationItem.title = user.firstName
     }

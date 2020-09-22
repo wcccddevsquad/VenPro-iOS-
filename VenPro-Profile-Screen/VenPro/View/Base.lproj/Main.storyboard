@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N8a-Hd-bKa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N8a-Hd-bKa">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -114,6 +114,7 @@
                                     <constraint firstItem="1Yd-Vl-UCH" firstAttribute="top" secondItem="zfm-wp-ico" secondAttribute="bottom" constant="12" id="GU4-ti-qy2"/>
                                     <constraint firstItem="RwB-vQ-Fc9" firstAttribute="leading" secondItem="WKs-89-joB" secondAttribute="leading" constant="47" id="Rvb-bs-GPW"/>
                                     <constraint firstItem="1Yd-Vl-UCH" firstAttribute="centerY" secondItem="WKs-89-joB" secondAttribute="centerY" id="Z7x-mW-PDH"/>
+                                    <constraint firstItem="zfm-wp-ico" firstAttribute="top" secondItem="WKs-89-joB" secondAttribute="top" id="eLI-5q-eTo"/>
                                     <constraint firstItem="zfm-wp-ico" firstAttribute="leading" secondItem="WKs-89-joB" secondAttribute="leading" constant="90.666666666666657" id="gA5-ie-9AE"/>
                                     <constraint firstItem="yQc-3P-8cX" firstAttribute="top" secondItem="1Yd-Vl-UCH" secondAttribute="bottom" constant="12" id="ze3-Bh-D2D"/>
                                 </constraints>
@@ -493,6 +494,7 @@
                                                 <state key="normal" title="Login"/>
                                                 <connections>
                                                     <action selector="LoginButtonPressed:" destination="N8a-Hd-bKa" eventType="touchUpInside" id="UZ0-7v-XgX"/>
+                                                    <segue destination="jAF-Zw-h25" kind="show" identifier="LoginToVerification" id="mCw-rq-9im"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -531,7 +533,6 @@
                     </view>
                     <connections>
                         <outlet property="userTelephoneNumber" destination="5XQ-Zb-DBI" id="uV9-n7-7oU"/>
-                        <segue destination="LB0-P9-0LJ" kind="show" identifier="textVerify" id="Jza-oj-BR0"/>
                         <segue destination="7B6-h4-fbS" kind="show" identifier="submitSegue" id="clT-qy-ZnR"/>
                     </connections>
                 </viewController>
@@ -558,7 +559,7 @@
             </objects>
             <point key="canvasLocation" x="1776.8115942028987" y="797.28260869565224"/>
         </scene>
-        <!--Drink Menu View Controller-->
+        <!--View Controller-->
         <scene sceneID="wzz-ep-ein">
             <objects>
                 <viewController id="Pc3-uU-2EP" customClass="ViewController" customModule="VenPro" customModuleProvider="target" sceneMemberID="viewController">
@@ -858,12 +859,63 @@
             </objects>
             <point key="canvasLocation" x="4480" y="1604"/>
         </scene>
+        <!--Verification-->
+        <scene sceneID="UPF-60-DwT">
+            <objects>
+                <viewController title="Verification" id="jAF-Zw-h25" customClass="TextVerificationLoginViewController" customModule="VenPro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8sq-VP-kRZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verification Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5qw-9r-vAj">
+                                <rect key="frame" x="128.66666666666669" y="289" width="156.66666666666669" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="81" translatesAutoresizingMaskIntoConstraints="NO" id="CNV-iP-fux">
+                                <rect key="frame" x="75.666666666666686" y="343" width="263" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSX-mE-1Pg">
+                                        <rect key="frame" x="0.0" y="0.0" width="49" height="30"/>
+                                        <state key="normal" title="Submit"/>
+                                        <connections>
+                                            <action selector="SubmitVerificationButton:" destination="jAF-Zw-h25" eventType="touchUpInside" id="3zd-fg-D1K"/>
+                                            <segue destination="nMj-wJ-rQZ" kind="show" identifier="LoginToprofileSegue" id="2Xa-lC-SZI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ckl-8F-Rec">
+                                        <rect key="frame" x="130" y="0.0" width="133" height="30"/>
+                                        <state key="normal" title="Resend Verification"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5qw-9r-vAj" firstAttribute="centerX" secondItem="8sq-VP-kRZ" secondAttribute="centerX" id="2sq-O8-V4a"/>
+                            <constraint firstItem="L9q-2y-gxR" firstAttribute="trailing" secondItem="5qw-9r-vAj" secondAttribute="trailing" constant="128.66999999999999" id="6EC-YW-tiE"/>
+                            <constraint firstItem="CNV-iP-fux" firstAttribute="centerY" secondItem="8sq-VP-kRZ" secondAttribute="centerY" id="A6w-qO-J2u"/>
+                            <constraint firstItem="5qw-9r-vAj" firstAttribute="leading" secondItem="L9q-2y-gxR" secondAttribute="leading" constant="128.66999999999999" id="F1U-Nl-kJt"/>
+                            <constraint firstItem="CNV-iP-fux" firstAttribute="top" secondItem="5qw-9r-vAj" secondAttribute="bottom" constant="20" id="IZQ-YD-QvI"/>
+                            <constraint firstItem="CNV-iP-fux" firstAttribute="centerX" secondItem="8sq-VP-kRZ" secondAttribute="centerX" id="oCr-83-TL7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="L9q-2y-gxR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pch-g2-hYo"/>
+                    <connections>
+                        <outlet property="verifyCodeTextField" destination="5qw-9r-vAj" id="lNR-h3-vh1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UmU-cz-kpO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="16" y="1365"/>
+        </scene>
     </scenes>
     <resources>
         <image name="line.horizontal.3" catalog="system" width="64" height="32"/>
         <image name="person" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1vp-0v-wNT"/>
+        <segue reference="2Xa-lC-SZI"/>
     </inferredMetricsTieBreakers>
 </document>
