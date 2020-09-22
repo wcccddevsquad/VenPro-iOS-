@@ -11,7 +11,7 @@
 		3E65D24D24CCDC1B000A99A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E65D24C24CCDC1B000A99A3 /* GoogleService-Info.plist */; };
 		3E6B23CD24BE506000F238BE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B23CC24BE506000F238BE /* LoginViewController.swift */; };
 		3E6B23CF24BE506E00F238BE /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B23CE24BE506E00F238BE /* CreateAccountViewController.swift */; };
-		3E6B23D124BE509900F238BE /* TextVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B23D024BE509900F238BE /* TextVerificationViewController.swift */; };
+		3E6B23D124BE509900F238BE /* TextVerificationSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B23D024BE509900F238BE /* TextVerificationSignUpViewController.swift */; };
 		3E6B23D324BE50CD00F238BE /* EventInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B23D224BE50CD00F238BE /* EventInfoViewController.swift */; };
 		3EBE55B324BAA84E001C0CB0 /* AttendeeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBE55B224BAA84E001C0CB0 /* AttendeeData.swift */; };
 		3EBE55B524BAA8F1001C0CB0 /* AttendeeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBE55B424BAA8F1001C0CB0 /* AttendeeListViewController.swift */; };
@@ -24,6 +24,8 @@
 		D0DF7E1024B6600E00A77E3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0DF7E0E24B6600E00A77E3A /* Main.storyboard */; };
 		D0DF7E1224B6600F00A77E3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DF7E1124B6600F00A77E3A /* Assets.xcassets */; };
 		D0DF7E1524B6600F00A77E3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0DF7E1324B6600F00A77E3A /* LaunchScreen.storyboard */; };
+		F92B5E05250981C400D9024B /* TextVerificationLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92B5E04250981C400D9024B /* TextVerificationLoginViewController.swift */; };
+		F942DAAA2516AD6B00AB22F9 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942DAA92516AD6B00AB22F9 /* Message.swift */; };
 		F98B7F5524FF0696009E6DE8 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B7F5424FF0696009E6DE8 /* RoundButton.swift */; };
 		F98B7F59250063A4009E6DE8 /* DrinkMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B7F58250063A4009E6DE8 /* DrinkMenuViewController.swift */; };
 		F99FC43924DB0BE4004B1851 /* MenuListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99FC43824DB0BE4004B1851 /* MenuListController.swift */; };
@@ -39,7 +41,7 @@
 		3E65D24C24CCDC1B000A99A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3E6B23CC24BE506000F238BE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3E6B23CE24BE506E00F238BE /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
-		3E6B23D024BE509900F238BE /* TextVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextVerificationViewController.swift; sourceTree = "<group>"; };
+		3E6B23D024BE509900F238BE /* TextVerificationSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextVerificationSignUpViewController.swift; sourceTree = "<group>"; };
 		3E6B23D224BE50CD00F238BE /* EventInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInfoViewController.swift; sourceTree = "<group>"; };
 		3EBE55B224BAA84E001C0CB0 /* AttendeeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeData.swift; sourceTree = "<group>"; };
 		3EBE55B424BAA8F1001C0CB0 /* AttendeeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeListViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +57,8 @@
 		D0DF7E1124B6600F00A77E3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0DF7E1424B6600F00A77E3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0DF7E1624B6600F00A77E3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F92B5E04250981C400D9024B /* TextVerificationLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextVerificationLoginViewController.swift; sourceTree = "<group>"; };
+		F942DAA92516AD6B00AB22F9 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		F98B7F5424FF0696009E6DE8 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundButton.swift; path = ../../../../../DrinkMenu/DrinkMenu/RoundButton.swift; sourceTree = "<group>"; };
 		F98B7F58250063A4009E6DE8 /* DrinkMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkMenuViewController.swift; sourceTree = "<group>"; };
 		F99FC43824DB0BE4004B1851 /* MenuListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListController.swift; sourceTree = "<group>"; };
@@ -80,7 +84,8 @@
 				F98B7F5424FF0696009E6DE8 /* RoundButton.swift */,
 				3E6B23CC24BE506000F238BE /* LoginViewController.swift */,
 				3E6B23CE24BE506E00F238BE /* CreateAccountViewController.swift */,
-				3E6B23D024BE509900F238BE /* TextVerificationViewController.swift */,
+				3E6B23D024BE509900F238BE /* TextVerificationSignUpViewController.swift */,
+				F92B5E04250981C400D9024B /* TextVerificationLoginViewController.swift */,
 				3E6B23D224BE50CD00F238BE /* EventInfoViewController.swift */,
 				D0DF7E0C24B6600E00A77E3A /* ProfileViewController.swift */,
 				3EBE55B424BAA8F1001C0CB0 /* AttendeeListViewController.swift */,
@@ -97,6 +102,7 @@
 				3EBE55B624BAABA4001C0CB0 /* AttendeeTableViewCell.swift */,
 				F99FC43824DB0BE4004B1851 /* MenuListController.swift */,
 				3EBE55B224BAA84E001C0CB0 /* AttendeeData.swift */,
+				F942DAA92516AD6B00AB22F9 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -295,13 +301,15 @@
 			files = (
 				3E5FED1C24FDB17C00B70FFF /* User.swift in Sources */,
 				3E6B23CD24BE506000F238BE /* LoginViewController.swift in Sources */,
-				3E6B23D124BE509900F238BE /* TextVerificationViewController.swift in Sources */,
+				3E6B23D124BE509900F238BE /* TextVerificationSignUpViewController.swift in Sources */,
+				F942DAAA2516AD6B00AB22F9 /* Message.swift in Sources */,
 				3EE1478024BFB48C00BF32BE /* DetailedAttendeeViewController.swift in Sources */,
 				F98B7F59250063A4009E6DE8 /* DrinkMenuViewController.swift in Sources */,
 				3EBE55B724BAABA4001C0CB0 /* AttendeeTableViewCell.swift in Sources */,
 				F99FC43924DB0BE4004B1851 /* MenuListController.swift in Sources */,
 				F98B7F5524FF0696009E6DE8 /* RoundButton.swift in Sources */,
 				3EBE55B324BAA84E001C0CB0 /* AttendeeData.swift in Sources */,
+				F92B5E05250981C400D9024B /* TextVerificationLoginViewController.swift in Sources */,
 				D0DF7E0D24B6600E00A77E3A /* ProfileViewController.swift in Sources */,
 				3E6B23D324BE50CD00F238BE /* EventInfoViewController.swift in Sources */,
 				3E6B23CF24BE506E00F238BE /* CreateAccountViewController.swift in Sources */,
