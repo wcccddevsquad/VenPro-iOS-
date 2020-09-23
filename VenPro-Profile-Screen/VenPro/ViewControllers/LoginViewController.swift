@@ -59,7 +59,7 @@ class LoginViewController: UIViewController, AuthUIDelegate {
             
         }
 
-       self.performSegue(withIdentifier: "textVerify", sender: self)
+       self.performSegue(withIdentifier: "LoginToVerification", sender: self)
         
 }
     let verificationID = UserDefaults.standard.string(forKey: "authVerificationID")

@@ -11,9 +11,11 @@ import Firebase
 import FirebaseDatabase
 import FirebaseAuth
 
-class ChatLogController: UICollectionViewController, UITextFieldDelegate {
+class ChatLogController: UICollectionViewController, UITextFieldDelegate, UICollectionViewDelegateFlowLayout {
     
     let attendeeDetails = DetailedAttendeeViewController()
+    
+    let cellId = "cellId"
     
     var user: User? {
         didSet {
@@ -36,6 +38,7 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         collectionView?.backgroundColor = .white
+        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         
         setupInputComponents()
         
@@ -113,11 +116,36 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate {
     func observeMessages() {
         let ref = Database.database().reference().child("messages")
         ref.observe(.childAdded, with: { (snapshot) in
+            
+            
+//            if let dictionary = snapshot.value as? [String: AnyObject] {
+//                let message = Message()
+//                message.setValuesForKeys(dictionary)
+//                print(message.text)
+//            }
+            
+            
             print (snapshot)
+            
         }, withCancel:  nil)
+    }
+    
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        
+        cell.backgroundColor = .gray
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexpath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.height, height: 80)
     }
 
 }
 //+17345555555
-
-//show team childByAutoId()...we might be able to use it to create users more effectively

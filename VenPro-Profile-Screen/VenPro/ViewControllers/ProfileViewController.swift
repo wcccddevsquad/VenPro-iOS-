@@ -145,35 +145,7 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
         }
     }
     
-    
-//    func createUserInDatabase() {
-//        
-//        guard let uid = account.userId else {
-//            return
-//        }
-//
-//        let firstName = account.firstName
-//        let lastName = account.lastName
-//        let phoneNumber = account.phoneNumber
-//        let email = account.email
-//        let userName = account.useRname
-//
-//
-//        let ref = Database.database().reference(fromURL: "https://venproios.firebaseio.com")
-//        let UsersReference = ref.child("users").child(uid)
-//        let values = ["phoneNumber": phoneNumber, "firstName": firstName, "lastName": lastName, "userName": userName, "email": email]
-//        UsersReference.updateChildValues(values, withCompletionBlock: {
-//            (err, ref) in
-//            
-//            if err != nil {
-//                print(err)
-//                return
-//            }
-//            print("saved user succesfully into database")
-//        })
-//    }
-    
-    //viewWillLoad will only load once this is to make sure the name updates
+    //viewWillLoad will only load once. this loads everytime and is to make sure the name updates
     override func viewWillAppear(_ animated: Bool) {
         CollectUsersDatabaseName()
     }
