@@ -19,6 +19,8 @@ class AttendeeListViewController: UIViewController, UITableViewDataSource, UITab
     
     var name = "name"
     
+    var toId: String?
+    
     var user: User?
     
     fileprivate var _refHandle: DatabaseHandle!
@@ -43,6 +45,7 @@ class AttendeeListViewController: UIViewController, UITableViewDataSource, UITab
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var user = self.users[indexPath.row]
         getUsersName(user: user)
+        getUserId(user: user)
         showChatControllerForUser(user: user)
     }
 
@@ -54,6 +57,10 @@ class AttendeeListViewController: UIViewController, UITableViewDataSource, UITab
         print(users.count)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.title = "Attendee List"
+    }
+    
     func fetchUser() {
         
         Database.database().reference().child("users").observe(.childAdded, with: { (snapshot) in
@@ -63,7 +70,6 @@ class AttendeeListViewController: UIViewController, UITableViewDataSource, UITab
                 
 //                user.setValuesForKeys(dictionary)
                 user.id = snapshot.key
-                print("the user id is \(user.id)")
                 user.firstName = dictionary["firstName"] as? String
                 user.lastName = dictionary["lastName"] as? String
                 user.email = dictionary["email"] as? String
@@ -99,12 +105,22 @@ class AttendeeListViewController: UIViewController, UITableViewDataSource, UITab
         return name
     }
     
+    func getUserId(user: User) -> String? {
+        let chatLogController = ChatLogController()
+        let AttendeeDetailScreen = DetailedAttendeeViewController()
+        chatLogController.user = user
+        toId = user.id ?? "cameUpNil"
+        AttendeeDetailScreen.toId = toId
+        return toId
+    }
+    
     //check later if this actually does anyhting and if I can delete
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "AttendeeDetail") {
             let AttendeeVC = segue.destination as! DetailedAttendeeViewController
             
             AttendeeVC.name = name
+            AttendeeVC.toId = toId
 
         }
     }
