@@ -5,7 +5,6 @@
 //  Created by Henry Feiler on 7/14/20.
 //  Copyright © 2020 VenPro. All rights reserved.
 //
-
 import UIKit
 import Firebase
 import FirebaseUI
@@ -36,7 +35,7 @@ class TextVerificationViewController: UIViewController {
         
         
         let verificationCode = verifyCodeTextField.text!
-//        let verificationCode = "654321"
+//      let verificationCode = "654321"
         
         
         let defaults = UserDefaults.standard

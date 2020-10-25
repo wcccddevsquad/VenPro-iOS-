@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E5F7128254519FE008A9567 /* TextVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F7127254519FE008A9567 /* TextVerificationViewController.swift */; };
+		3E5F712A25451AC2008A9567 /* TextVerificationLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F712925451AC2008A9567 /* TextVerificationLoginViewController.swift */; };
+		3E5F712C25451C64008A9567 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F712B25451C64008A9567 /* RoundButton.swift */; };
+		3E5F712E25451CA4008A9567 /* Mesages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F712D25451CA4008A9567 /* Mesages.swift */; };
+		3E5F713025451F07008A9567 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F712F25451F07008A9567 /* ChatMessageCell.swift */; };
 		3E5FED1C24FDB17C00B70FFF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5FED1B24FDB17C00B70FFF /* User.swift */; };
 		3E65D24D24CCDC1B000A99A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E65D24C24CCDC1B000A99A3 /* GoogleService-Info.plist */; };
 		3E6B23CD24BE506000F238BE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B23CC24BE506000F238BE /* LoginViewController.swift */; };
 		3E6B23CF24BE506E00F238BE /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B23CE24BE506E00F238BE /* CreateAccountViewController.swift */; };
-		3E6B23D124BE509900F238BE /* TextVerificationSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B23D024BE509900F238BE /* TextVerificationSignUpViewController.swift */; };
 		3E6B23D324BE50CD00F238BE /* EventInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B23D224BE50CD00F238BE /* EventInfoViewController.swift */; };
 		3EBE55B324BAA84E001C0CB0 /* AttendeeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBE55B224BAA84E001C0CB0 /* AttendeeData.swift */; };
 		3EBE55B524BAA8F1001C0CB0 /* AttendeeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBE55B424BAA8F1001C0CB0 /* AttendeeListViewController.swift */; };
@@ -24,9 +28,6 @@
 		D0DF7E1024B6600E00A77E3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0DF7E0E24B6600E00A77E3A /* Main.storyboard */; };
 		D0DF7E1224B6600F00A77E3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DF7E1124B6600F00A77E3A /* Assets.xcassets */; };
 		D0DF7E1524B6600F00A77E3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0DF7E1324B6600F00A77E3A /* LaunchScreen.storyboard */; };
-		F92B5E05250981C400D9024B /* TextVerificationLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92B5E04250981C400D9024B /* TextVerificationLoginViewController.swift */; };
-		F942DAAA2516AD6B00AB22F9 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942DAA92516AD6B00AB22F9 /* Message.swift */; };
-		F98B7F5524FF0696009E6DE8 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B7F5424FF0696009E6DE8 /* RoundButton.swift */; };
 		F98B7F59250063A4009E6DE8 /* DrinkMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B7F58250063A4009E6DE8 /* DrinkMenuViewController.swift */; };
 		F99FC43924DB0BE4004B1851 /* MenuListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99FC43824DB0BE4004B1851 /* MenuListController.swift */; };
 		F9F7C35224FE91F2002698A7 /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F7C35124FE91F2002698A7 /* ChatLogController.swift */; };
@@ -36,12 +37,16 @@
 		20DADAE1982B2208A0A561C1 /* Pods-VenPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenPro.release.xcconfig"; path = "Target Support Files/Pods-VenPro/Pods-VenPro.release.xcconfig"; sourceTree = "<group>"; };
 		37E3AB72A756A690041517D2 /* Pods-VenPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenPro.debug.xcconfig"; path = "Target Support Files/Pods-VenPro/Pods-VenPro.debug.xcconfig"; sourceTree = "<group>"; };
 		3CADD932E0FBCEFB3BE7586A /* Pods_VenPro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VenPro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E5F7127254519FE008A9567 /* TextVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextVerificationViewController.swift; sourceTree = "<group>"; };
+		3E5F712925451AC2008A9567 /* TextVerificationLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextVerificationLoginViewController.swift; sourceTree = "<group>"; };
+		3E5F712B25451C64008A9567 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		3E5F712D25451CA4008A9567 /* Mesages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mesages.swift; sourceTree = "<group>"; };
+		3E5F712F25451F07008A9567 /* ChatMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		3E5FED1B24FDB17C00B70FFF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3E65D24B24CCCD02000A99A3 /* VenProDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VenProDebug.entitlements; sourceTree = "<group>"; };
 		3E65D24C24CCDC1B000A99A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3E6B23CC24BE506000F238BE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3E6B23CE24BE506E00F238BE /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
-		3E6B23D024BE509900F238BE /* TextVerificationSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextVerificationSignUpViewController.swift; sourceTree = "<group>"; };
 		3E6B23D224BE50CD00F238BE /* EventInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInfoViewController.swift; sourceTree = "<group>"; };
 		3EBE55B224BAA84E001C0CB0 /* AttendeeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeData.swift; sourceTree = "<group>"; };
 		3EBE55B424BAA8F1001C0CB0 /* AttendeeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeListViewController.swift; sourceTree = "<group>"; };
@@ -57,9 +62,6 @@
 		D0DF7E1124B6600F00A77E3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0DF7E1424B6600F00A77E3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0DF7E1624B6600F00A77E3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F92B5E04250981C400D9024B /* TextVerificationLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextVerificationLoginViewController.swift; sourceTree = "<group>"; };
-		F942DAA92516AD6B00AB22F9 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		F98B7F5424FF0696009E6DE8 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundButton.swift; path = ../../../../../DrinkMenu/DrinkMenu/RoundButton.swift; sourceTree = "<group>"; };
 		F98B7F58250063A4009E6DE8 /* DrinkMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkMenuViewController.swift; sourceTree = "<group>"; };
 		F99FC43824DB0BE4004B1851 /* MenuListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListController.swift; sourceTree = "<group>"; };
 		F9F7C35124FE91F2002698A7 /* ChatLogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
@@ -81,16 +83,16 @@
 			isa = PBXGroup;
 			children = (
 				F98B7F58250063A4009E6DE8 /* DrinkMenuViewController.swift */,
-				F98B7F5424FF0696009E6DE8 /* RoundButton.swift */,
 				3E6B23CC24BE506000F238BE /* LoginViewController.swift */,
 				3E6B23CE24BE506E00F238BE /* CreateAccountViewController.swift */,
-				3E6B23D024BE509900F238BE /* TextVerificationSignUpViewController.swift */,
-				F92B5E04250981C400D9024B /* TextVerificationLoginViewController.swift */,
 				3E6B23D224BE50CD00F238BE /* EventInfoViewController.swift */,
 				D0DF7E0C24B6600E00A77E3A /* ProfileViewController.swift */,
 				3EBE55B424BAA8F1001C0CB0 /* AttendeeListViewController.swift */,
 				3EE1477F24BFB48C00BF32BE /* DetailedAttendeeViewController.swift */,
 				F9F7C35124FE91F2002698A7 /* ChatLogController.swift */,
+				3E5F7127254519FE008A9567 /* TextVerificationViewController.swift */,
+				3E5F712925451AC2008A9567 /* TextVerificationLoginViewController.swift */,
+				3E5F712B25451C64008A9567 /* RoundButton.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -102,7 +104,7 @@
 				3EBE55B624BAABA4001C0CB0 /* AttendeeTableViewCell.swift */,
 				F99FC43824DB0BE4004B1851 /* MenuListController.swift */,
 				3EBE55B224BAA84E001C0CB0 /* AttendeeData.swift */,
-				F942DAA92516AD6B00AB22F9 /* Message.swift */,
+				3E5F712D25451CA4008A9567 /* Mesages.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				D0DF7E0E24B6600E00A77E3A /* Main.storyboard */,
+				3E5F712F25451F07008A9567 /* ChatMessageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -299,24 +302,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E5F712C25451C64008A9567 /* RoundButton.swift in Sources */,
+				3E5F712A25451AC2008A9567 /* TextVerificationLoginViewController.swift in Sources */,
 				3E5FED1C24FDB17C00B70FFF /* User.swift in Sources */,
 				3E6B23CD24BE506000F238BE /* LoginViewController.swift in Sources */,
-				3E6B23D124BE509900F238BE /* TextVerificationSignUpViewController.swift in Sources */,
-				F942DAAA2516AD6B00AB22F9 /* Message.swift in Sources */,
 				3EE1478024BFB48C00BF32BE /* DetailedAttendeeViewController.swift in Sources */,
 				F98B7F59250063A4009E6DE8 /* DrinkMenuViewController.swift in Sources */,
 				3EBE55B724BAABA4001C0CB0 /* AttendeeTableViewCell.swift in Sources */,
 				F99FC43924DB0BE4004B1851 /* MenuListController.swift in Sources */,
-				F98B7F5524FF0696009E6DE8 /* RoundButton.swift in Sources */,
 				3EBE55B324BAA84E001C0CB0 /* AttendeeData.swift in Sources */,
-				F92B5E05250981C400D9024B /* TextVerificationLoginViewController.swift in Sources */,
+				3E5F7128254519FE008A9567 /* TextVerificationViewController.swift in Sources */,
 				D0DF7E0D24B6600E00A77E3A /* ProfileViewController.swift in Sources */,
 				3E6B23D324BE50CD00F238BE /* EventInfoViewController.swift in Sources */,
 				3E6B23CF24BE506E00F238BE /* CreateAccountViewController.swift in Sources */,
 				F9F7C35224FE91F2002698A7 /* ChatLogController.swift in Sources */,
 				D0DF7E0924B6600E00A77E3A /* AppDelegate.swift in Sources */,
 				3EBE55B524BAA8F1001C0CB0 /* AttendeeListViewController.swift in Sources */,
+				3E5F713025451F07008A9567 /* ChatMessageCell.swift in Sources */,
 				D0DF7E0B24B6600E00A77E3A /* SceneDelegate.swift in Sources */,
+				3E5F712E25451CA4008A9567 /* Mesages.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
