@@ -112,8 +112,8 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
         let childRef = ref.childByAutoId()
         let fromId = user?.id
         print("toID is \(toId)")
-        //let timestamp = String(NSDate().timeIntervalSince1970)
-        //let fromID = Auth.auth().currentUser?.uid
+        let timestamp = String(NSDate().timeIntervalSince1970)
+        let fromID = Auth.auth().currentUser?.uid
         let values = ["text": inputTextField.text!, "toId": toId]
         childRef.updateChildValues(values)
         
@@ -203,4 +203,3 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
     }
 
 }
-//+17345555555
