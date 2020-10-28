@@ -10,7 +10,7 @@
 		3E5F7128254519FE008A9567 /* TextVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F7127254519FE008A9567 /* TextVerificationViewController.swift */; };
 		3E5F712A25451AC2008A9567 /* TextVerificationLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F712925451AC2008A9567 /* TextVerificationLoginViewController.swift */; };
 		3E5F712C25451C64008A9567 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F712B25451C64008A9567 /* RoundButton.swift */; };
-		3E5F712E25451CA4008A9567 /* Mesages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F712D25451CA4008A9567 /* Mesages.swift */; };
+		3E5F712E25451CA4008A9567 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F712D25451CA4008A9567 /* Messages.swift */; };
 		3E5F713025451F07008A9567 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F712F25451F07008A9567 /* ChatMessageCell.swift */; };
 		3E5FED1C24FDB17C00B70FFF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5FED1B24FDB17C00B70FFF /* User.swift */; };
 		3E65D24D24CCDC1B000A99A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E65D24C24CCDC1B000A99A3 /* GoogleService-Info.plist */; };
@@ -40,7 +40,7 @@
 		3E5F7127254519FE008A9567 /* TextVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextVerificationViewController.swift; sourceTree = "<group>"; };
 		3E5F712925451AC2008A9567 /* TextVerificationLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextVerificationLoginViewController.swift; sourceTree = "<group>"; };
 		3E5F712B25451C64008A9567 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
-		3E5F712D25451CA4008A9567 /* Mesages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mesages.swift; sourceTree = "<group>"; };
+		3E5F712D25451CA4008A9567 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		3E5F712F25451F07008A9567 /* ChatMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		3E5FED1B24FDB17C00B70FFF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3E65D24B24CCCD02000A99A3 /* VenProDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VenProDebug.entitlements; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 				3EBE55B624BAABA4001C0CB0 /* AttendeeTableViewCell.swift */,
 				F99FC43824DB0BE4004B1851 /* MenuListController.swift */,
 				3EBE55B224BAA84E001C0CB0 /* AttendeeData.swift */,
-				3E5F712D25451CA4008A9567 /* Mesages.swift */,
+				3E5F712D25451CA4008A9567 /* Messages.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -320,7 +320,7 @@
 				3EBE55B524BAA8F1001C0CB0 /* AttendeeListViewController.swift in Sources */,
 				3E5F713025451F07008A9567 /* ChatMessageCell.swift in Sources */,
 				D0DF7E0B24B6600E00A77E3A /* SceneDelegate.swift in Sources */,
-				3E5F712E25451CA4008A9567 /* Mesages.swift in Sources */,
+				3E5F712E25451CA4008A9567 /* Messages.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

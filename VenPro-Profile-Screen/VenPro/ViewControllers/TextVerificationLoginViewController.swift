@@ -38,19 +38,19 @@ class TextVerificationLoginViewController: UIViewController {
             self.performSegue(withIdentifier: "LoginToprofileSegue", sender: self)
             print("User successfully created")
 
-            ref = self.db.collection("users").addDocument(data: [
-                "first": "Alan",
-                "middle": "Mathison",
-                "last": "Turing",
-                "born": 1912
-            ]
-            ) { err in
-                if let err = err {
-                    print("Error adding document: \(err)")
-                } else {
-                    print("Document added with ID: \(ref!.documentID)")
-                }
-            }
+//            ref = self.db.collection("users").addDocument(data: [
+//                "first": "Alan",
+//                "middle": "Mathison",
+//                "last": "Turing",
+//                "born": 1912
+//            ]
+//            ) { err in
+//                if let err = err {
+//                    print("Error adding document: \(err)")
+//                } else {
+//                    print("Document added with ID: \(ref!.documentID)")
+//                }
+//            }
             }
             
         }

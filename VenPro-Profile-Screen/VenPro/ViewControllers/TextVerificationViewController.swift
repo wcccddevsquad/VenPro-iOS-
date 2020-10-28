@@ -60,18 +60,18 @@ class TextVerificationViewController: UIViewController {
 //            db.collection("users").addDocument(data: ["firstname": "Bruce", "lastname": "Wayne"])
             // Add a new document with a generated ID
             // Add a second document with a generated ID.
-            ref = self.db.collection("users").addDocument(data: [
-                "first": "Alan",
-                "middle": "Mathison",
-                "last": "Turing",
-                "born": 1912
-            ]) { err in
-                if let err = err {
-                    print("Error adding document: \(err)")
-                } else {
-                    print("Document added with ID: \(ref!.documentID)")
-                }
-            }
+//            ref = self.db.collection("users").addDocument(data: [
+//                "first": "Alan",
+//                "middle": "Mathison",
+//                "last": "Turing",
+//                "born": 1912
+//            ]) { err in
+//                if let err = err {
+//                    print("Error adding document: \(err)")
+//                } else {
+//                    print("Document added with ID: \(ref!.documentID)")
+//                }
+//            }
             }
             
         }

@@ -64,9 +64,6 @@ class LoginViewController: UIViewController, AuthUIDelegate {
 }
     let verificationID = UserDefaults.standard.string(forKey: "authVerificationID")
     
-    
-    
-
     }
     
 

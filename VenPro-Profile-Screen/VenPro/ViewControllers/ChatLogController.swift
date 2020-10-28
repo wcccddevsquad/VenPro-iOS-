@@ -21,11 +21,11 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
     
     let cellId = "cellId"
     
+//    var timeStamp: String?
+    
     var user: User? {
         didSet {
             navigationItem.title = user?.firstName
-            
-            
         }
     }
     
@@ -110,15 +110,19 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
     @objc func handleSend() {
         let ref = Database.database().reference().child("messages")
         let childRef = ref.childByAutoId()
-        let fromId = user?.id
-        print("toID is \(toId)")
+//        let toId = user?.id
+//        print(toId)
+        print("toID is \(String(describing: toId))")
         let timestamp = String(NSDate().timeIntervalSince1970)
         let fromID = Auth.auth().currentUser?.uid
-        let values = ["text": inputTextField.text!, "toId": toId]
-        childRef.updateChildValues(values)
+        let values = ["text": inputTextField.text!, "toId": toId, "timeStamp": timestamp, "fromID": fromID]
+        childRef.updateChildValues(values as [AnyHashable : Any])
+        
+        inputTextField.text = nil
         
         
-        print(inputTextField.text)
+        
+//        print(inputTextField.text)
     }
     
     
@@ -128,9 +132,9 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
     }
     
     func observeMessages() {
-//        guard let uid = Auth.auth().currentUser?.uid else {
-//        return
-//        }
+        guard (Auth.auth().currentUser?.uid) != nil else {
+        return
+        }
         //this works
         let userMessagesRef = Database.database().reference().child("messages")//.child(uid)
         //this works
@@ -153,7 +157,7 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
 //                message.setValuesForKeys(dictionary)
                 message.text = dictionary["text"] as? String
 //                print("something else")
-                print("message is \(message.text)")
+                print("message is \(String(describing: message.text))")
                 self.messages.append(message)
 
                 DispatchQueue.main.async {
@@ -193,8 +197,16 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
         let message = messages[indexPath.item]
         cell.textView.text = message.text
         
- //       cell.backgroundColor = .red
+        if message.fromId != Auth.auth().currentUser?.uid {
+            cell.bubbleView.backgroundColor = UIColor.lightGray
+            cell.textView.textColor = UIColor.black
+            
+        } else {
+            cell.bubbleView.backgroundColor = UIColor.blue
+            cell.textView.textColor = UIColor.white
+        }
         
+            
         return cell
     }
     
