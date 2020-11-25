@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseUI
 
-class TextVerificationViewController: UIViewController {
+class TextVerificationSignUpViewController: UIViewController {
 
     @IBOutlet weak var verifyCodeTextField: UITextField!
     
@@ -29,6 +29,8 @@ class TextVerificationViewController: UIViewController {
     var phoneNumber: String?
     
     var userName: String?
+    
+    let user = User()
 
     
     @IBAction func SubmitVerificationButton(_ sender: Any) {
@@ -56,8 +58,8 @@ class TextVerificationViewController: UIViewController {
             //comes up nil
             print("name is currently \(self.firstName)")
             
-            self.performSegue(withIdentifier: "profileSegue", sender: self)
-            print("User successfully created")
+//            self.performSegue(withIdentifier: "profileSegue", sender: self)
+//            print("User successfully created")
 //            db.collection("users").addDocument(data: ["firstname": "Bruce", "lastname": "Wayne"])
             // Add a new document with a generated ID
             // Add a second document with a generated ID.
@@ -76,8 +78,6 @@ class TextVerificationViewController: UIViewController {
             }
             
         }
-        
-        
 
     }
     

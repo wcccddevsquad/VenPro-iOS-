@@ -15,15 +15,26 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
     
     let attendeeDetails = DetailedAttendeeViewController()
     
+    var fromId: String?
+    
+    var toId: String?
+    
+    var chatPairId: String?
+    
     let cellId = "cellId"
+    
     
     var user: User? {
         didSet {
             navigationItem.title = user?.firstName
+            
+            
         }
     }
     
     var messages = [Messages]()
+    
+    var messagesDictionary = [String: Messages]()
     
     
     lazy var inputTextField: UITextField = {
@@ -39,20 +50,19 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        observeMessages()
+        
         collectionView?.backgroundColor = .white
         collectionView?.register(ChatMessageCell.self, forCellWithReuseIdentifier: cellId)
-        collectionView?.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 58, right: 0)
-        collectionView?.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 58, right: 0)
-
-        collectionView?.alwaysBounceVertical = true
+        
+        print("pair id is \(chatPairId)")
         
         setupInputComponents()
-        
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        observeMessages()
+       // observeMessages()
     }
     
     func setupInputComponents() {
@@ -107,16 +117,17 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
     }
     
     @objc func handleSend() {
-        let ref = Database.database().reference().child("messages")
+        
+        let ref = Database.database().reference().child("messages").child("chat Pair Id's").child((chatPairId)!)
         let childRef = ref.childByAutoId()
-        // let toId = user!.toId!
-        //let timestamp = String(NSDate().timeIntervalSince1970)
-        //let fromID = Auth.auth().currentUser?.uid
-        let values = ["text": inputTextField.text!]
+        let timestamp = String(NSDate().timeIntervalSince1970)
+        let fromID = Auth.auth().currentUser?.uid
+        let values = ["text": inputTextField.text!, "toId": toId, "fromId": fromID, "timestamp": timestamp]
         childRef.updateChildValues(values)
         
-        self.inputTextField.text = nil
+        
         print(inputTextField.text)
+        
     }
     
     
@@ -125,66 +136,48 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
         return true
     }
     
+    
+    
     func observeMessages() {
-        guard let uid = Auth.auth().currentUser?.uid else {
-        return
-        }
-//        this works
-        let userMessagesRef = Database.database().reference().child("messages")//.child(uid)
-        //this works
+        
+        let userMessagesRef = //Database.database().reference().child("messages")
+            
+            Database.database().reference().child("messages").child("chat Pair Id's").child((chatPairId)!)
+        
         userMessagesRef.observe(.childAdded, with: { (snapshot) in
-            //does work
-            print(snapshot)
             
             let messageId = snapshot.key
-            let messagesRef = Database.database().reference().child("messages").child(messageId)
+            print("the snapshot is \(messageId)")
+            
+            
+            let messagesRef = Database.database().reference().child("messages").child("chat Pair Id's").child((self.chatPairId)!).child(messageId)
             messagesRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                            
                 
-                //this works
                 guard let dictionary = snapshot.value as? [String: AnyObject] else {
                     return
                 }
-                
-                 //works
                 let message = Messages()
-//                 crashes--keys have to match!!!
-//                message.setValuesForKeys(dictionary)
+                var chatCell = ChatMessageCell()
+                
                 message.text = dictionary["text"] as? String
-                print("message is \(String(describing: message.text))")
+                message.toId = dictionary["toId"] as? String
+                message.fromId = dictionary["fromId"] as? String
+                
+                chatCell.messageId = message.fromId
+
+                //this shows the messages in the chat
                 self.messages.append(message)
-  
-                
-//              Insert ChatPartnerID 
-                
-                
-                
-                
+
+
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
                 }
                 
             }, withCancel: nil)
             
-   //         print("snapshot key = \(messageId)")
         }, withCancel: nil)
     }
-        
-//        let ref = Database.database().reference().child("messages")
-//        ref.observe(.childAdded, with: { (snapshot) in
-            
-            
-//            if let dictionary = snapshot.value as? [String: AnyObject] {
-//                let message = Message()
-//                message.setValuesForKeys(dictionary)
-//                print(message.text)
-//            }
-            
-            
-//            print (snapshot)
-//
-//        }, withCancel:  nil)
-//    }
-    
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return messages.count
@@ -196,10 +189,20 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
         let message = messages[indexPath.item]
         cell.textView.text = message.text
         
- //       cell.backgroundColor = .red
-        //Modifys the cells width
         cell.bubbleWidthAnchor?.constant = estimatedFrameForText(text: message.text!).width + 32
         
+        if message.fromId == Auth.auth().currentUser?.uid {
+            cell.bubbleView.backgroundColor = UIColor(red: 0, green: 137/255, blue: 249/255, alpha: 1)
+            cell.textView.textColor = .white
+            cell.bubbleViewLeftAnchor?.isActive = false
+            cell.bubbleViewRightAnchor?.isActive = true
+            
+        } else {
+            cell.bubbleView.backgroundColor = UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1)
+            cell.textView.textColor = .black
+            cell.bubbleViewLeftAnchor?.isActive = true
+            cell.bubbleViewRightAnchor?.isActive = false
+        }
         
         return cell
     }
@@ -222,10 +225,5 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
         return NSString(string: text).boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)], context: nil)
         
     }
-    //This over ride methof makes sure the constraints stay in place when rotated
-//    override func ViewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-//        collectionView?.collectionViewLayout.invalidateLayout()
-//    }
 
 }
-//+17345555555
