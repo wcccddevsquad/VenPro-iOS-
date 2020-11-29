@@ -21,8 +21,8 @@ class TextVerificationLoginViewController: UIViewController {
         
         
         
-//        let verificationCode = verifyCodeTextField.text!
-      let verificationCode = "654321"
+        let verificationCode = verifyCodeTextField.text!
+//      let verificationCode = "654321"
         
         
         let defaults = UserDefaults.standard
@@ -36,8 +36,8 @@ class TextVerificationLoginViewController: UIViewController {
         if error != nil {
             print("Error")
         } else {
-            self.performSegue(withIdentifier: "LoginToprofileSegue", sender: self)
-            print("User successfully created")
+ //           self.performSegue(withIdentifier: "LoginToprofileSegue", sender: self)
+//            print("User successfully created")
 //            db.collection("users").addDocument(data: ["firstname": "Bruce", "lastname": "Wayne"])
             // Add a new document with a generated ID
             // Add a second document with a generated ID.

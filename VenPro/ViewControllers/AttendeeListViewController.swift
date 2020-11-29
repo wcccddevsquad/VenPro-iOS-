@@ -19,7 +19,36 @@ class AttendeeListViewController: UIViewController, UITableViewDataSource, UITab
     
     var name = "name"
     
+    var toId: String?
+    
     var user: User?
+    
+    var messages = [Messages]()
+    
+    var chatPairId: String?
+    
+    
+    //this code is a test
+    var messageIdPair: Messages? {
+        didSet {
+            if let toId = message?.toId {
+                let ref = Database.database().reference().child("users").child(toId)
+                ref.observeSingleEvent(of: .value, with: { (snapshot) in
+                    if let dictionary = snapshot.value as? [String: AnyObject] {
+                        
+                    }
+                }, withCancel: nil)
+            }
+        }
+    }
+    
+    var message: Messages? {
+        didSet {
+            setUpChatPartnerId()
+        }
+    }
+    
+//    let message = messageIdPair[IndexPath.row]//////////////////this is the place to start back
     
     fileprivate var _refHandle: DatabaseHandle!
 
@@ -41,9 +70,23 @@ class AttendeeListViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         var user = self.users[indexPath.row]
         getUsersName(user: user)
+        getUserId(user: user)
+        getUserPairId(user: user)
         showChatControllerForUser(user: user)
+        
+        guard let chatPartnerId = message?.chatPartnerId() else {
+            print("did not work")
+         //   print("the chat partner id is \(message?.chatPartnerId())")
+            return
+        }
+        
+        let ref = Database.database().reference().child("users").child("chatPartnerId")
+        ref.observe(.value, with: { (snapshot) in
+            print(snapshot)
+        }, withCancel: nil)
     }
 
     override func viewDidLoad() {
@@ -65,26 +108,19 @@ class AttendeeListViewController: UIViewController, UITableViewDataSource, UITab
             if let dictionary = snapshot.value as? [String: Any] {
                 let user = User()
                 
-                print(snapshot)
 //                user.setValuesForKeys(dictionary)
                 user.id = snapshot.key
-                print("the user id is \(user.id)")
-                user.email = dictionary["email"] as? String
                 user.firstName = dictionary["firstName"] as? String
                 user.lastName = dictionary["lastName"] as? String
+                user.email = dictionary["email"] as? String
                 user.userName = dictionary["userName"] as? String
-                user.id = snapshot.key
-                print("the user id is \(user.id)")
-
-
                 self.users.append(user)
                 self.tableView.reloadData()
                 
                 
             }
-
+            
             print(snapshot)
-//            print(self.users)
             
         }, withCancel: nil)
     
@@ -109,12 +145,59 @@ class AttendeeListViewController: UIViewController, UITableViewDataSource, UITab
         return name
     }
     
+    func getUserId(user: User) -> String? {
+        let chatLogController = ChatLogController()
+        let AttendeeDetailScreen = DetailedAttendeeViewController()
+        chatLogController.user = user
+        toId = user.id ?? "cameUpNil"
+        AttendeeDetailScreen.toId = toId
+        return toId
+    }
+    
+    func getUserPairId(user: User) -> String? {
+        let chatLogController = ChatLogController()
+        let AttendeeDetailScreen = DetailedAttendeeViewController()
+        //putting the uid values of the sender and the receiver in an array
+        var pairIdArray = ["\(Auth.auth().currentUser?.uid)", "\(toId)"]
+        print("pair Id Array = \(pairIdArray)")
+        //putting the list in alphabetical order
+        pairIdArray.sort()
+        print("sorted pair Id Array = \(pairIdArray)")
+        //join the array strings together as a regular string
+        let joinedTest = pairIdArray.joined()
+        print("the merged string should be \(joinedTest)")
+        
+        
+        //chatPairId = "\(toId ?? "cameUpNil") \(Auth.auth().currentUser?.uid)"
+        chatPairId = pairIdArray.joined()
+        chatLogController.chatPairId = chatPairId
+        AttendeeDetailScreen.chatPairId = chatPairId
+        //chatPairIdWorksHere
+        return chatPairId
+    }
+    
+    
+    func setUpChatPartnerId () {
+        if let id = message?.chatPartnerId() {
+            let ref = Database.database().reference().child("users").child(id)
+            ref.observe(.value, with: { (snapshot) in
+                
+                //should there be code in here?
+                
+                
+            }, withCancel: nil)
+        }
+    }
+    
+    
     //check later if this actually does anyhting and if I can delete
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "AttendeeDetail") {
             let AttendeeVC = segue.destination as! DetailedAttendeeViewController
             
             AttendeeVC.name = name
+            AttendeeVC.toId = toId
+            AttendeeVC.chatPairId = chatPairId
 
         }
     }

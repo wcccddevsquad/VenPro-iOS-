@@ -48,15 +48,6 @@ class CreateAccountViewController: UIViewController, AuthUIDelegate {
                 
         }
         
-        print("first name is \(firstName) before throw")
-//        let tvViewController = TextVerificationViewController()
-//        let profileScreen = ProfileViewController()
-//        tvViewController.firstName = firstName
-//        tvViewController.lastName = lastName
-//        tvViewController.email = email
-//        tvViewController.userName = useRname
-//        profileScreen.firstName = firstName
-        
             performSegue(withIdentifier: "textVerifySegue", sender: self)
             print("Success!")
 
@@ -68,7 +59,10 @@ class CreateAccountViewController: UIViewController, AuthUIDelegate {
     
             override func viewDidLoad() {
                 super.viewDidLoad()
+                idCheck()
                 configureDatabase()
+                
+                
             }
     
     func configureDatabase() {
@@ -88,7 +82,7 @@ class CreateAccountViewController: UIViewController, AuthUIDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if (segue.identifier == "textVerifySegue") {
-        let verificationVC = segue.destination as! TextVerificationViewController
+        let verificationVC = segue.destination as! TextVerificationSignUpViewController
         
         verificationVC.firstName = firstName
         verificationVC.lastName = lastName
@@ -96,6 +90,12 @@ class CreateAccountViewController: UIViewController, AuthUIDelegate {
         verificationVC.userName = useRname
     }
     
+    }
+    
+    func idCheck() {
+        if Auth.auth().currentUser?.uid != nil {
+            print("uid already exist")
+        }
     }
     
 }

@@ -15,6 +15,8 @@ class DetailedAttendeeViewController: UIViewController {
     let attendeeList = AttendeeListViewController()
     
     var name: String?
+    var toId: String?
+    var chatPairId: String?
     
     var user: User? {
         didSet {
@@ -37,6 +39,8 @@ class DetailedAttendeeViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = name
         
+        print(chatPairId)
+        
         // Do any additional setup after loading the view.
     }
     
@@ -45,8 +49,12 @@ class DetailedAttendeeViewController: UIViewController {
     func showChatController() {
         let chatLogController = ChatLogController(collectionViewLayout: UICollectionViewFlowLayout())
         chatLogController.navigationItem.title = name
+        chatLogController.toId = toId ?? "toId was nil"
+        chatLogController.chatPairId = chatPairId
           navigationController?.pushViewController(chatLogController, animated: true)
           navigationItem.title = name
+        //working print
+//        print ("to id was \(toId)")
     }
     
 }
