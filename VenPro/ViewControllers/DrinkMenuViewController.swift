@@ -10,48 +10,15 @@ import UIKit
 
 class DrinkMenuViewController: UIViewController {
 
-    
-    @IBAction func Margarita(_ sender: Any) {
-    }
-    
-    @IBAction func Beer(_ sender: Any) {
-    }
-    
-    @IBAction func Cosmo(_ sender: Any) {
-    }
-    
-    @IBAction func Martini(_ sender: Any) {
-    }
-    
-    @IBAction func Daiquiri(_ sender: Any) {
-    }
-    
-    
-    @IBAction func Whiskey(_ sender: Any) {
-    }
-    
-    @IBAction func Coke(_ sender: Any) {
-    }
-    
-    @IBAction func Sprite(_ sender: Any) {
-    }
-    
-    @IBAction func MountainDew(_ sender: Any) {
-    }
-    
-    @IBAction func DietCoke(_ sender: Any) {
-    }
-    
-    @IBAction func Fanta(_ sender: Any) {
-    }
-        
-    @IBAction func Water(_ sender: Any) {
+    @IBAction func drinkDetails(_ sender: Any) {
+        performSegue(withIdentifier: "details", sender: UIButton.self)
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
     
     

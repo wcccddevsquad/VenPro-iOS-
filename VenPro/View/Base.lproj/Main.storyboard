@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N8a-Hd-bKa">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,7 +12,7 @@
             <objects>
                 <viewController id="ivu-dH-601" customClass="EventInfoViewController" customModule="VenPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V2O-rJ-fgl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="660"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCF-n1-cRl">
@@ -52,16 +52,114 @@
             </objects>
             <point key="canvasLocation" x="2538" y="1526"/>
         </scene>
+        <!--Drink Order View Controller-->
+        <scene sceneID="vB5-4U-FyZ">
+            <objects>
+                <viewController id="N0h-bQ-s5a" customClass="DrinkOrderViewController" customModule="VenPro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wjV-Xi-Xhd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tKt-D2-VIW">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <items>
+                                    <navigationItem title="Choose a Payment Method:" id="nu0-iN-jCs"/>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="DO4-iB-zEn">
+                                <rect key="frame" x="10" y="50" width="396" height="728"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Uk-Nr-kCf" userLabel="GooglePay">
+                                        <rect key="frame" x="0.0" y="0.0" width="396" height="133.33333333333334"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="GooglePay">
+                                            <color key="titleColor" red="0.0022636079230000002" green="0.55341476199999995" blue="0.55712968110000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="checkout:" destination="N0h-bQ-s5a" eventType="touchUpInside" id="qbq-3o-mIE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMQ-dM-r4i">
+                                        <rect key="frame" x="0.0" y="198.33333333333331" width="396" height="133.33333333333331"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Venmo">
+                                            <color key="titleColor" red="0.0022636079230000002" green="0.55341476199999995" blue="0.55712968110000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="checkout:" destination="N0h-bQ-s5a" eventType="touchUpInside" id="bVA-Me-maH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1n-ZF-Vxh" userLabel="ApplePay">
+                                        <rect key="frame" x="0.0" y="396.66666666666669" width="396" height="133.00000000000006"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="ApplePay">
+                                            <color key="titleColor" red="0.0022636079230000002" green="0.55341476199999995" blue="0.55712968110000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="checkout:" destination="N0h-bQ-s5a" eventType="touchUpInside" id="zyn-js-qtV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ww6-Ew-yHU">
+                                        <rect key="frame" x="0.0" y="594.66666666666663" width="396" height="133.33333333333337"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="CashApp">
+                                            <color key="titleColor" red="0.27860486509999999" green="0.58940476180000001" blue="0.48245286939999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="checkout:" destination="N0h-bQ-s5a" eventType="touchUpInside" id="agf-0T-O2H"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DO4-iB-zEn" firstAttribute="leading" secondItem="DNH-Rf-VQ5" secondAttribute="leading" constant="10" id="ElB-92-8WF"/>
+                            <constraint firstItem="tKt-D2-VIW" firstAttribute="top" secondItem="DNH-Rf-VQ5" secondAttribute="top" id="GUj-rv-nz8"/>
+                            <constraint firstItem="tKt-D2-VIW" firstAttribute="centerX" secondItem="wjV-Xi-Xhd" secondAttribute="centerX" id="UOT-st-bcD"/>
+                            <constraint firstItem="DO4-iB-zEn" firstAttribute="top" secondItem="wjV-Xi-Xhd" secondAttribute="top" constant="50" id="Z8E-Y7-ebq"/>
+                            <constraint firstAttribute="trailing" secondItem="DO4-iB-zEn" secondAttribute="trailing" constant="8" id="bCF-Zh-cnn"/>
+                            <constraint firstItem="DNH-Rf-VQ5" firstAttribute="bottom" secondItem="DO4-iB-zEn" secondAttribute="bottom" constant="8" id="oFj-OP-Taj"/>
+                            <constraint firstItem="tKt-D2-VIW" firstAttribute="leading" secondItem="DNH-Rf-VQ5" secondAttribute="leading" id="pxz-Vo-7Ol"/>
+                            <constraint firstAttribute="trailing" secondItem="tKt-D2-VIW" secondAttribute="trailing" id="wTd-fa-HNZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DNH-Rf-VQ5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UFC-0P-wr8"/>
+                    <connections>
+                        <segue destination="g3I-OH-Ri9" kind="show" identifier="checkout" id="Dvp-Ce-vvH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bTj-vD-P03" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4479.7101449275369" y="2329.8913043478265"/>
+        </scene>
+        <!--Checkout View Controller-->
+        <scene sceneID="BxT-VH-UP1">
+            <objects>
+                <viewController id="g3I-OH-Ri9" customClass="CheckoutViewController" customModule="VenPro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eby-0H-M15">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="cGw-Sv-HsD"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nRt-Y3-AEg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s7i-WA-Ujt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4480" y="3037"/>
+        </scene>
         <!--Profile View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="ProfileVC" id="BYZ-38-t0r" customClass="ProfileViewController" customModule="VenPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="660"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvr-sQ-LM9">
-                                <rect key="frame" x="171.66666666666666" y="559" width="71" height="30"/>
+                                <rect key="frame" x="171.66666666666666" y="685" width="71" height="30"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Join Event"/>
@@ -70,7 +168,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="WKs-89-joB">
-                                <rect key="frame" x="40" y="54.333333333333314" width="334" height="414"/>
+                                <rect key="frame" x="40" y="54.333333333333314" width="334" height="540"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zfm-wp-ico">
                                         <rect key="frame" x="90.666666666666671" y="0.0" width="152.66666666666663" height="162"/>
@@ -79,7 +177,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Yd-Vl-UCH">
-                                        <rect key="frame" x="101" y="174" width="132" height="66"/>
+                                        <rect key="frame" x="101" y="174" width="132" height="192"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Upload/Change Pic"/>
@@ -88,7 +186,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQc-3P-8cX">
-                                        <rect key="frame" x="130" y="252" width="74.333333333333314" height="15"/>
+                                        <rect key="frame" x="130" y="378" width="74.333333333333314" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="15" id="x8Y-ao-Q9G"/>
                                         </constraints>
@@ -97,7 +195,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This is just information about myself. I'm looking for a good time." translatesAutoresizingMaskIntoConstraints="NO" id="RwB-vQ-Fc9">
-                                        <rect key="frame" x="47" y="279" width="240" height="135"/>
+                                        <rect key="frame" x="47" y="405.00000000000006" width="240" height="134.99999999999994"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -157,11 +255,11 @@
             <objects>
                 <viewController id="oTW-om-vVU" customClass="AttendeeListViewController" customModule="VenPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hlh-2e-UsC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="660"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z3s-5U-fJj">
-                                <rect key="frame" x="8" y="204" width="398" height="456"/>
+                                <rect key="frame" x="8" y="204" width="398" height="582"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="attendeeCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="attendeeCell" id="EeZ-ew-p3v" customClass="AttendeeTableViewCell" customModule="VenPro" customModuleProvider="target">
@@ -249,11 +347,11 @@
             <objects>
                 <viewController id="6vI-ri-ikq" customClass="DetailedAttendeeViewController" customModule="VenPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sLe-j8-EUu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="660"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Fpv-PJ-dQh">
-                                <rect key="frame" x="8" y="560" width="398" height="50"/>
+                                <rect key="frame" x="8" y="686" width="398" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oqu-TG-9hB">
                                         <rect key="frame" x="0.0" y="0.0" width="99.666666666666671" height="50"/>
@@ -288,7 +386,7 @@
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BFe-WU-sVM">
-                                <rect key="frame" x="8" y="51.666666666666657" width="398" height="499.33333333333337"/>
+                                <rect key="frame" x="8" y="50.000000000000021" width="398" height="628"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
@@ -308,82 +406,82 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A8Y-iS-N6a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4410.144927536232" y="797.28260869565224"/>
+            <point key="canvasLocation" x="4480" y="797"/>
         </scene>
         <!--CreateAccount-->
         <scene sceneID="ARM-GO-Jbd">
             <objects>
                 <viewController title="CreateAccount" id="7B6-h4-fbS" customClass="CreateAccountViewController" customModule="VenPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iil-r9-nK3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MU5-BE-D9P">
-                                <rect key="frame" x="20" y="40" width="374" height="656"/>
+                                <rect key="frame" x="20" y="40" width="374" height="748"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="h1W-nK-hBh">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="656"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="748"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdY-8b-ekV">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="76.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="89.666666666666671"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ueo-Do-s3q">
-                                                <rect key="frame" x="0.0" y="96.666666666666657" width="374" height="76.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="109.66666666666666" width="374" height="89.666666666666657"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LXR-sx-5aD">
-                                                        <rect key="frame" x="0.0" y="0.0" width="177" height="76.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="177" height="89.666666666666671"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9dS-4s-lDU">
-                                                        <rect key="frame" x="197" y="0.0" width="177" height="76.333333333333329"/>
+                                                        <rect key="frame" x="197" y="0.0" width="177" height="89.666666666666671"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qCG-Ko-Hm9">
-                                                <rect key="frame" x="0.0" y="193" width="374" height="76.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="219.33333333333329" width="374" height="89.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ieq-aU-pxP">
-                                                <rect key="frame" x="0.0" y="289.66666666666669" width="374" height="76.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="329" width="374" height="90"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cNR-EY-fJa">
-                                                <rect key="frame" x="0.0" y="386.33333333333331" width="374" height="76.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="439" width="374" height="89.666666666666629"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hDN-j3-cyK">
-                                                <rect key="frame" x="0.0" y="482.99999999999994" width="374" height="76.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="548.66666666666663" width="374" height="89.666666666666629"/>
                                                 <subviews>
                                                     <switch opaque="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n9P-Bk-Hhg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="76.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="89.666666666666671"/>
                                                     </switch>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1JU-xD-KG3">
-                                                        <rect key="frame" x="49" y="0.0" width="325" height="76.333333333333329"/>
+                                                        <rect key="frame" x="49" y="0.0" width="325" height="89.666666666666671"/>
                                                         <state key="normal" title="Agree with terms and conditions*"/>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PIM-Of-1rP">
-                                                <rect key="frame" x="0.0" y="579.33333333333337" width="374" height="76.666666666666629"/>
+                                                <rect key="frame" x="0.0" y="658.33333333333337" width="374" height="89.666666666666629"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0q-1g-G0I">
-                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="76.666666666666671"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="89.666666666666671"/>
                                                         <state key="normal" title="Submit"/>
                                                         <connections>
                                                             <action selector="SubmitButtonPressed:" destination="7B6-h4-fbS" eventType="touchUpInside" id="6hu-VS-RL6"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zew-mX-l9p">
-                                                        <rect key="frame" x="187" y="0.0" width="187" height="76.666666666666671"/>
+                                                        <rect key="frame" x="187" y="0.0" width="187" height="89.666666666666671"/>
                                                         <state key="normal" title="Clear"/>
                                                         <connections>
                                                             <action selector="clearButtonPushed:" destination="7B6-h4-fbS" eventType="touchUpInside" id="MHp-Fb-eSH"/>
@@ -424,16 +522,16 @@
             <objects>
                 <viewController title="Verification" id="LB0-P9-0LJ" customClass="TextVerificationViewController" customModule="VenPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C2d-Ja-Mle">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verification Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aTg-ya-kOG">
-                                <rect key="frame" x="128.66666666666669" y="289" width="156.66666666666669" height="34"/>
+                                <rect key="frame" x="128.66666666666669" y="352" width="156.66666666666669" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="81" translatesAutoresizingMaskIntoConstraints="NO" id="e8V-nK-ObC">
-                                <rect key="frame" x="75.666666666666686" y="343" width="263" height="30"/>
+                                <rect key="frame" x="75.666666666666686" y="406" width="263" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xP-8l-Lwk">
                                         <rect key="frame" x="0.0" y="0.0" width="49" height="30"/>
@@ -475,11 +573,11 @@
             <objects>
                 <viewController title="Login" id="N8a-Hd-bKa" customClass="LoginViewController" customModule="VenPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BIh-br-7jk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="o3x-D4-VL1">
-                                <rect key="frame" x="80" y="301" width="254" height="134"/>
+                                <rect key="frame" x="80" y="381" width="254" height="134"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gpe-Fe-SDD">
                                         <rect key="frame" x="0.0" y="0.0" width="254" height="84"/>
@@ -514,7 +612,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VenPro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGE-CI-zAd">
-                                <rect key="frame" x="173" y="0.0" width="68" height="26.333333333333332"/>
+                                <rect key="frame" x="173" y="44" width="68" height="26.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -561,12 +659,12 @@
             </objects>
             <point key="canvasLocation" x="1776.8115942028987" y="797.28260869565224"/>
         </scene>
-        <!--View Controller-->
+        <!--Drink Menu View Controller-->
         <scene sceneID="wzz-ep-ein">
             <objects>
-                <viewController id="Pc3-uU-2EP" customClass="ViewController" customModule="VenPro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Pc3-uU-2EP" customClass="DrinkMenuViewController" customModule="VenPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YqR-JQ-VxZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="660"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KtF-Zs-igv">
@@ -608,6 +706,9 @@
                                         <real key="value" value="50"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="drinkDetails:" destination="Pc3-uU-2EP" eventType="touchUpInside" id="9kn-gC-Ibe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgX-wG-Rid" customClass="RoundButton" customModule="VenPro" customModuleProvider="target">
                                 <rect key="frame" x="157" y="114" width="100" height="100"/>
@@ -628,13 +729,14 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="Beer:" destination="Pc3-uU-2EP" eventType="touchUpInside" id="lsx-Mg-Rao"/>
+                                    <action selector="drinkDetails:" destination="Pc3-uU-2EP" eventType="touchUpInside" id="nuZ-OM-O1F"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZO-EF-d6w" customClass="RoundButton" customModule="VenPro" customModuleProvider="target">
                                 <rect key="frame" x="279" y="114" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0022636079230000002" green="0.55341476199999995" blue="0.55712968110000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title="Cosmo">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -650,7 +752,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="Cosmo:" destination="Pc3-uU-2EP" eventType="touchUpInside" id="4gj-wT-KGl"/>
+                                    <action selector="drinkDetails:" destination="Pc3-uU-2EP" eventType="touchUpInside" id="jR1-JV-eZl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOb-uv-CTS" customClass="RoundButton" customModule="VenPro" customModuleProvider="target">
@@ -672,7 +774,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="Martini:" destination="Pc3-uU-2EP" eventType="touchUpInside" id="dsm-4d-wEA"/>
+                                    <action selector="drinkDetails:" destination="Pc3-uU-2EP" eventType="touchUpInside" id="nle-io-0aq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sx9-x1-lWm" customClass="RoundButton" customModule="VenPro" customModuleProvider="target">
@@ -694,7 +796,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="Daiquiri:" destination="Pc3-uU-2EP" eventType="touchUpInside" id="AyZ-sR-2VQ"/>
+                                    <action selector="drinkDetails:" destination="Pc3-uU-2EP" eventType="touchUpInside" id="e7i-RR-7oe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDO-i2-cm4" customClass="RoundButton" customModule="VenPro" customModuleProvider="target">
@@ -716,7 +818,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="Whiskey:" destination="Pc3-uU-2EP" eventType="touchUpInside" id="gnE-Wa-3kA"/>
+                                    <action selector="drinkDetails:" destination="Pc3-uU-2EP" eventType="touchUpInside" id="U7M-fj-Dxg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aF7-yh-CK9" customClass="RoundButton" customModule="VenPro" customModuleProvider="target">
@@ -738,7 +840,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="Coke:" destination="Pc3-uU-2EP" eventType="touchUpInside" id="iop-nw-Gap"/>
+                                    <action selector="drinkDetails:" destination="Pc3-uU-2EP" eventType="touchUpInside" id="QHq-YD-cCl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWH-SV-kMk" customClass="RoundButton" customModule="VenPro" customModuleProvider="target">
@@ -760,7 +862,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="Sprite:" destination="Pc3-uU-2EP" eventType="touchUpInside" id="vSF-xc-uYc"/>
+                                    <action selector="drinkDetails:" destination="Pc3-uU-2EP" eventType="touchUpInside" id="dua-Go-kxE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWQ-df-vfB" customClass="RoundButton" customModule="VenPro" customModuleProvider="target">
@@ -782,7 +884,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="MountainDew:" destination="Pc3-uU-2EP" eventType="touchUpInside" id="NH8-3r-S6m"/>
+                                    <action selector="drinkDetails:" destination="Pc3-uU-2EP" eventType="touchUpInside" id="9fw-Oh-liB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5d-dQ-j10" customClass="RoundButton" customModule="VenPro" customModuleProvider="target">
@@ -804,7 +906,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="DietCoke:" destination="Pc3-uU-2EP" eventType="touchUpInside" id="rhn-hp-Aa1"/>
+                                    <action selector="drinkDetails:" destination="Pc3-uU-2EP" eventType="touchUpInside" id="ehb-Cn-VpS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3a-Jr-OYe" customClass="RoundButton" customModule="VenPro" customModuleProvider="target">
@@ -826,7 +928,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="Fanta:" destination="Pc3-uU-2EP" eventType="touchUpInside" id="VBm-9Q-Zde"/>
+                                    <action selector="drinkDetails:" destination="Pc3-uU-2EP" eventType="touchUpInside" id="YWG-ht-PRb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTa-UI-3Sa" customClass="RoundButton" customModule="VenPro" customModuleProvider="target">
@@ -848,7 +950,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="Water:" destination="Pc3-uU-2EP" eventType="touchUpInside" id="qsH-mn-mNf"/>
+                                    <action selector="drinkDetails:" destination="Pc3-uU-2EP" eventType="touchUpInside" id="WCO-yM-f0t"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -856,26 +958,96 @@
                         <viewLayoutGuide key="safeArea" id="mFV-Hz-jul"/>
                     </view>
                     <navigationItem key="navigationItem" id="zf8-bg-NgB"/>
+                    <connections>
+                        <segue destination="pch-AY-8Cn" kind="show" identifier="details" id="I5h-7a-tzi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oKK-ef-0FJ" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4480" y="1604"/>
+        </scene>
+        <!--Drink Details View Controller-->
+        <scene sceneID="Mcf-bb-1Xv">
+            <objects>
+                <viewController id="pch-AY-8Cn" customClass="DrinkDetailsViewController" customModule="VenPro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gzo-cu-LcC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$drinkDescription, $price" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAD-wY-hoM">
+                                <rect key="frame" x="8" y="31.999999999999996" width="398" height="33.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7zz-3c-lKk">
+                                <rect key="frame" x="87" y="280" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzg-RU-TWW" customClass="RoundButton" customModule="VenPro" customModuleProvider="target">
+                                <rect key="frame" x="32" y="718" width="350" height="52"/>
+                                <color key="backgroundColor" red="0.0022636079230000002" green="0.55341476199999995" blue="0.55712968110000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="Proceed to Checkout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0022636079230000002" green="0.55341476199999995" blue="0.55712968110000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="N0h-bQ-s5a" kind="show" id="bV8-Gj-wYl"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Notes" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LCw-Ls-QR8">
+                                <rect key="frame" x="8" y="660" width="398" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="LU8-UO-BqW" firstAttribute="trailing" secondItem="PAD-wY-hoM" secondAttribute="trailing" constant="8" id="2O4-0f-CPr"/>
+                            <constraint firstItem="LU8-UO-BqW" firstAttribute="trailing" secondItem="Xzg-RU-TWW" secondAttribute="trailing" constant="32" id="52o-uQ-YhB"/>
+                            <constraint firstItem="Xzg-RU-TWW" firstAttribute="top" secondItem="LCw-Ls-QR8" secondAttribute="bottom" constant="24" id="8Hc-GI-EPt"/>
+                            <constraint firstItem="PAD-wY-hoM" firstAttribute="centerX" secondItem="gzo-cu-LcC" secondAttribute="centerX" id="96U-DS-bGF"/>
+                            <constraint firstItem="PAD-wY-hoM" firstAttribute="top" secondItem="LU8-UO-BqW" secondAttribute="top" constant="32" id="UxT-No-sIC"/>
+                            <constraint firstItem="LCw-Ls-QR8" firstAttribute="leading" secondItem="LU8-UO-BqW" secondAttribute="leading" constant="8" id="Wmv-qN-ZFp"/>
+                            <constraint firstItem="LU8-UO-BqW" firstAttribute="bottom" secondItem="Xzg-RU-TWW" secondAttribute="bottom" constant="16" id="e7N-hk-G1x"/>
+                            <constraint firstItem="Xzg-RU-TWW" firstAttribute="leading" secondItem="LU8-UO-BqW" secondAttribute="leading" constant="32" id="eYL-fc-PR0"/>
+                            <constraint firstItem="LU8-UO-BqW" firstAttribute="trailing" secondItem="LCw-Ls-QR8" secondAttribute="trailing" constant="8" id="t5G-Hi-NdK"/>
+                            <constraint firstItem="PAD-wY-hoM" firstAttribute="leading" secondItem="LU8-UO-BqW" secondAttribute="leading" constant="8" id="zb9-i4-vwP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LU8-UO-BqW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="glI-gy-qk2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R7v-3D-Kca" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5386.9565217391309" y="1605.8035714285713"/>
         </scene>
         <!--Verification-->
         <scene sceneID="UPF-60-DwT">
             <objects>
                 <viewController title="Verification" id="jAF-Zw-h25" customClass="TextVerificationLoginViewController" customModule="VenPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8sq-VP-kRZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verification Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5qw-9r-vAj">
-                                <rect key="frame" x="128.66666666666669" y="289" width="156.66666666666669" height="34"/>
+                                <rect key="frame" x="128.66666666666669" y="352" width="156.66666666666669" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="81" translatesAutoresizingMaskIntoConstraints="NO" id="CNV-iP-fux">
-                                <rect key="frame" x="75.666666666666686" y="343" width="263" height="30"/>
+                                <rect key="frame" x="75.666666666666686" y="406" width="263" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSX-mE-1Pg">
                                         <rect key="frame" x="0.0" y="0.0" width="49" height="30"/>
