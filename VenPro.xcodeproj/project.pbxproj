@@ -26,6 +26,9 @@
 		D0DF7E1224B6600F00A77E3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DF7E1124B6600F00A77E3A /* Assets.xcassets */; };
 		D0DF7E1524B6600F00A77E3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0DF7E1324B6600F00A77E3A /* LaunchScreen.storyboard */; };
 		F92B5E05250981C400D9024B /* TextVerificationLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92B5E04250981C400D9024B /* TextVerificationLoginViewController.swift */; };
+		F93805D7258101CA00F29352 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93805D4258101CA00F29352 /* CheckoutViewController.swift */; };
+		F93805D8258101CA00F29352 /* DrinkDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93805D5258101CA00F29352 /* DrinkDetailsViewController.swift */; };
+		F93805D9258101CA00F29352 /* DrinkOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93805D6258101CA00F29352 /* DrinkOrderViewController.swift */; };
 		F942DAAA2516AD6B00AB22F9 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942DAA92516AD6B00AB22F9 /* Messages.swift */; };
 		F942DAAE252242E700AB22F9 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942DAAD252242E700AB22F9 /* ChatMessageCell.swift */; };
 		F98B7F59250063A4009E6DE8 /* DrinkMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B7F58250063A4009E6DE8 /* DrinkMenuViewController.swift */; };
@@ -60,6 +63,9 @@
 		D0DF7E1424B6600F00A77E3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0DF7E1624B6600F00A77E3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F92B5E04250981C400D9024B /* TextVerificationLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextVerificationLoginViewController.swift; sourceTree = "<group>"; };
+		F93805D4258101CA00F29352 /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		F93805D5258101CA00F29352 /* DrinkDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkDetailsViewController.swift; sourceTree = "<group>"; };
+		F93805D6258101CA00F29352 /* DrinkOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkOrderViewController.swift; sourceTree = "<group>"; };
 		F942DAA92516AD6B00AB22F9 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		F942DAAD252242E700AB22F9 /* ChatMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		F98B7F58250063A4009E6DE8 /* DrinkMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkMenuViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +94,9 @@
 				3E6B23D024BE509900F238BE /* TextVerificationSignUpViewController.swift */,
 				F92B5E04250981C400D9024B /* TextVerificationLoginViewController.swift */,
 				3E6B23D224BE50CD00F238BE /* EventInfoViewController.swift */,
+				F93805D4258101CA00F29352 /* CheckoutViewController.swift */,
+				F93805D5258101CA00F29352 /* DrinkDetailsViewController.swift */,
+				F93805D6258101CA00F29352 /* DrinkOrderViewController.swift */,
 				D0DF7E0C24B6600E00A77E3A /* ProfileViewController.swift */,
 				3EBE55B424BAA8F1001C0CB0 /* AttendeeListViewController.swift */,
 				3EE1477F24BFB48C00BF32BE /* DetailedAttendeeViewController.swift */,
@@ -302,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F93805D8258101CA00F29352 /* DrinkDetailsViewController.swift in Sources */,
 				3E5FED1C24FDB17C00B70FFF /* User.swift in Sources */,
 				3E6B23CD24BE506000F238BE /* LoginViewController.swift in Sources */,
 				3E6B23D124BE509900F238BE /* TextVerificationSignUpViewController.swift in Sources */,
@@ -310,12 +320,14 @@
 				3EE1478024BFB48C00BF32BE /* DetailedAttendeeViewController.swift in Sources */,
 				F98B7F59250063A4009E6DE8 /* DrinkMenuViewController.swift in Sources */,
 				3EBE55B724BAABA4001C0CB0 /* AttendeeTableViewCell.swift in Sources */,
+				F93805D7258101CA00F29352 /* CheckoutViewController.swift in Sources */,
 				F99FC43924DB0BE4004B1851 /* MenuListController.swift in Sources */,
 				3EBE55B324BAA84E001C0CB0 /* AttendeeData.swift in Sources */,
 				F92B5E05250981C400D9024B /* TextVerificationLoginViewController.swift in Sources */,
 				D0DF7E0D24B6600E00A77E3A /* ProfileViewController.swift in Sources */,
 				3E6B23D324BE50CD00F238BE /* EventInfoViewController.swift in Sources */,
 				3E6B23CF24BE506E00F238BE /* CreateAccountViewController.swift in Sources */,
+				F93805D9258101CA00F29352 /* DrinkOrderViewController.swift in Sources */,
 				F9F7C35224FE91F2002698A7 /* ChatLogController.swift in Sources */,
 				D0DF7E0924B6600E00A77E3A /* AppDelegate.swift in Sources */,
 				F942DAAE252242E700AB22F9 /* ChatMessageCell.swift in Sources */,
