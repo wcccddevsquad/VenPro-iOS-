@@ -12,6 +12,18 @@ import FirebaseUI
 import FirebaseAuth
 
 class CreateAccountViewController: UIViewController, AuthUIDelegate {
+    
+    lazy var profileImageView: UIImageView = {
+       let imageView = UIImageView()
+       imageView.image = UIImage(named:"profileDefaultImage")
+       imageView.translatesAutoresizingMaskIntoConstraints = false
+       imageView.contentMode = .scaleAspectFit
+       
+           imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleSelectProfileImageView)))
+           imageView.isUserInteractionEnabled = true
+           
+       return imageView
+       }()
 
     @IBOutlet weak var userTelephoneNumberTextField: UITextField!
     @IBOutlet weak var firstnameTextField: UITextField!
@@ -30,6 +42,34 @@ class CreateAccountViewController: UIViewController, AuthUIDelegate {
     var useRname: String?
 
     @IBAction func SubmitButtonPressed(_ sender: Any) {
+        
+        
+        //testing image code below
+              
+              
+              let storageRef = Storage.storage().reference().child("myImage.png")
+              
+              if let uploadData = self.profileImageView.image!.pngData() {
+                  
+                     storageRef.putData(uploadData, metadata: nil, completion:
+                      { (metadata, error) in
+                          
+                          if error != nil {
+                            print(error as Any)
+                              return
+                          }
+                          
+                        print(metadata as Any)
+                          
+                     })
+                  
+              }
+              
+           
+              
+              
+         //Below is original code before new profile image codes
+
         
          phoneNumber = userTelephoneNumberTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
          firstName = firstnameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -59,11 +99,24 @@ class CreateAccountViewController: UIViewController, AuthUIDelegate {
     
             override func viewDidLoad() {
                 super.viewDidLoad()
+                view.addSubview(profileImageView)
+                
+                setupProfileImageView()
                 idCheck()
                 configureDatabase()
                 
                 
             }
+    
+    // func setupProfileImageView is new code added
+    
+    func setupProfileImageView() {
+       profileImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    
+        profileImageView.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        profileImageView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+
+    }
     
     func configureDatabase() {
         
