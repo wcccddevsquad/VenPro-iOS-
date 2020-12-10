@@ -58,7 +58,7 @@ class TextVerificationSignUpViewController: UIViewController {
             //comes up nil
             print("name is currently \(self.firstName)")
             
-//            self.performSegue(withIdentifier: "profileSegue", sender: self)
+            self.performSegue(withIdentifier: "profileSegue", sender: self)
 //            print("User successfully created")
 //            db.collection("users").addDocument(data: ["firstname": "Bruce", "lastname": "Wayne"])
             // Add a new document with a generated ID

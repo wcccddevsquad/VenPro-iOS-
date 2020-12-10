@@ -520,7 +520,7 @@
         <!--Verification-->
         <scene sceneID="Nuw-IO-ZMF">
             <objects>
-                <viewController title="Verification" id="LB0-P9-0LJ" customClass="TextVerificationViewController" customModule="VenPro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Verification" id="LB0-P9-0LJ" customClass="TextVerificationSignUpViewController" customModule="VenPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C2d-Ja-Mle">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1090,6 +1090,6 @@
         <image name="person" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2Xa-lC-SZI"/>
+        <segue reference="JzI-L6-po6"/>
     </inferredMetricsTieBreakers>
 </document>
